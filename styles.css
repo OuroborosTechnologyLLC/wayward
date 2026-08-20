@@ -1,0 +1,679 @@
+:root {
+	color-scheme: dark;
+	--page: #151515;
+	--surface: #1e1f20;
+	--surface-alt: #252628;
+	--text: #e8e3d9;
+	--muted: #aaa49a;
+	--rule: #48443d;
+	--accent: #d5a85f;
+	--link: #91b8d0;
+	--measure: 70ch;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	background: var(--page);
+	color: var(--text);
+	font-size: 100%;
+}
+
+body {
+	margin: 0 auto;
+	max-width: 82rem;
+	padding: clamp(1.25rem, 4vw, 4rem);
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 1.05rem;
+	line-height: 1.68;
+	hyphens: auto;
+	overflow-wrap: break-word;
+	text-rendering: optimizeLegibility;
+	font-kerning: normal;
+}
+
+body> :not(.table-scroll) {
+	max-width: var(--measure);
+	margin-right: auto;
+	margin-left: auto;
+}
+
+p,
+li,
+dd,
+blockquote,
+td {
+	text-align: justify;
+}
+
+p {
+	margin-top: 0.9em;
+	margin-bottom: 0.9em;
+}
+
+a {
+	color: var(--link);
+	text-decoration-thickness: 0.08em;
+	text-underline-offset: 0.16em;
+}
+
+a:visited {
+	color: #b6a0c8;
+}
+
+a:hover {
+	color: #c4dceb;
+}
+
+.document-subtitle {
+	color: var(--muted);
+}
+
+.document-title {
+	margin: 0 0 0.5em;
+	padding-bottom: 0.28em;
+	border-bottom: 2px solid var(--accent);
+	color: #f4efe6;
+	font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	font-size: clamp(2rem, 5vw, 3rem);
+	font-weight: 700;
+	letter-spacing: -0.025em;
+	line-height: 1.2;
+	text-wrap: balance;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #f4efe6;
+	font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	line-height: 1.2;
+	text-align: left;
+	text-wrap: balance;
+}
+
+h1 {
+	margin-top: 2.5em;
+	padding-bottom: 0.28em;
+	border-bottom: 2px solid var(--accent);
+	font-size: clamp(2rem, 5vw, 3rem);
+	letter-spacing: -0.025em;
+}
+
+body>h1:first-child {
+	margin-top: 0;
+}
+
+h2 {
+	margin-top: 2.1em;
+	padding-bottom: 0.22em;
+	border-bottom: 1px solid var(--rule);
+	font-size: clamp(1.45rem, 3vw, 2rem);
+}
+
+h3 {
+	margin-top: 1.75em;
+	font-size: 1.25rem;
+}
+
+h4,
+h5,
+h6 {
+	margin-top: 1.5em;
+}
+
+h5,
+h6 {
+	font-size: 1em;
+	font-style: italic;
+}
+
+h6 {
+	font-weight: normal;
+}
+
+ol,
+ul {
+	margin-top: 1em;
+	padding-left: 1.7em;
+}
+
+li+li {
+	margin-top: 0.24em;
+}
+
+li>ol,
+li>ul {
+	margin-top: 0.25em;
+}
+
+blockquote {
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+	padding: 0.75rem 1.15rem;
+	border-left: 0.28rem solid var(--accent);
+	border-radius: 0 0.35rem 0.35rem 0;
+	background: var(--surface);
+	color: #d1cbc0;
+}
+
+blockquote> :first-child {
+	margin-top: 0;
+}
+
+blockquote> :last-child {
+	margin-bottom: 0;
+}
+
+.referee-guidance {
+	margin-top: 1.35rem;
+	margin-bottom: 1.35rem;
+	padding: 0.8rem 1rem;
+	break-inside: avoid;
+	border: 1px solid var(--rule);
+	border-left: 0.32rem solid var(--accent);
+	border-radius: 0.45rem;
+	background: var(--surface);
+}
+
+.referee-guidance>p {
+	margin: 0.55rem 0;
+}
+
+.referee-guidance>.referee-guidance__label {
+	margin-top: 0;
+	color: var(--accent);
+	font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	font-size: 0.82rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.referee-guidance> :last-child {
+	margin-bottom: 0;
+}
+
+hr {
+	height: 1px;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	border: 0;
+	background: var(--rule);
+}
+
+img,
+svg {
+	max-width: 100%;
+	height: auto;
+}
+
+code {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+	font-size: 0.88em;
+	hyphens: manual;
+	white-space: pre-wrap;
+}
+
+pre {
+	margin: 1em 0;
+	padding: 1rem;
+	overflow: auto;
+	border: 1px solid var(--rule);
+	border-radius: 0.35rem;
+	background: var(--surface);
+	font-size: 0.88em;
+}
+
+pre code {
+	padding: 0;
+	overflow: visible;
+	overflow-wrap: normal;
+}
+
+.sourceCode {
+	overflow: visible;
+	background: transparent;
+}
+
+.table-scroll {
+	width: 100%;
+	margin: 1.6rem 0 2rem;
+	overflow-x: auto;
+	border: 1px solid var(--rule);
+	border-radius: 0.45rem;
+	background: var(--surface);
+	scrollbar-color: var(--accent) var(--surface-alt);
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+	font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	font-size: 0.93rem;
+	line-height: 1.42;
+	font-variant-numeric: lining-nums tabular-nums;
+}
+
+caption {
+	padding: 0.75rem 1rem;
+	color: var(--muted);
+	font-weight: 600;
+	text-align: left;
+}
+
+thead {
+	background: #2d2b28;
+}
+
+th,
+td {
+	padding: 0.62rem 0.72rem;
+	border-right: 1px solid var(--rule);
+	border-bottom: 1px solid var(--rule);
+	vertical-align: top;
+}
+
+th:last-child,
+td:last-child {
+	border-right: 0;
+}
+
+tbody tr:last-child td {
+	border-bottom: 0;
+}
+
+th {
+	color: #fff8ea;
+	font-weight: 700;
+	text-align: left;
+	text-wrap: balance;
+}
+
+tbody tr:nth-child(even) {
+	background: var(--surface-alt);
+}
+
+tbody tr:hover {
+	background: #302e2a;
+}
+
+td> :first-child {
+	margin-top: 0;
+}
+
+td> :last-child {
+	margin-bottom: 0;
+}
+
+col.col-roll {
+	width: 7rem;
+}
+
+col.col-number {
+	width: 8rem;
+}
+
+col.col-number-wide {
+	width: 14rem;
+}
+
+col.col-label {
+	width: 12rem;
+}
+
+col.col-label-wide {
+	width: 18rem;
+}
+
+col.col-text {
+	width: auto;
+}
+
+.table--label-number :is(th, td):nth-child(1),
+.table--armor :is(th, td):nth-child(1),
+.table--weapons :is(th, td):nth-child(1),
+.table--catalog :is(th, td):nth-child(1),
+.table--skills :is(th, td):nth-child(2),
+.table--treasure :is(th, td):nth-child(1) {
+	text-align: left;
+}
+
+.table--label-number :is(th, td):nth-child(2),
+.table--roll :is(th, td):nth-child(1),
+.table--skills :is(th, td):nth-child(1),
+.table--treasure :is(th, td):nth-child(2),
+.cell-roll {
+	text-align: center;
+	white-space: nowrap;
+}
+
+.table--armor :is(th, td):nth-child(2),
+.table--armor :is(th, td):nth-child(3),
+.table--weapons :is(th, td):nth-child(2),
+.table--weapons :is(th, td):nth-child(3),
+.table--weapons :is(th, td):nth-child(4),
+.table--catalog :is(th, td):nth-child(2) {
+	text-align: center;
+	white-space: nowrap;
+}
+
+.table--label-number {
+	min-width: 30rem;
+}
+
+.table--armor,
+.table--weapons {
+	min-width: 64rem;
+}
+
+.table--catalog,
+.table--skills {
+	min-width: 44rem;
+}
+
+.table--roll {
+	min-width: 40rem;
+}
+
+.table--treasure {
+	min-width: 50rem;
+}
+
+header {
+	margin-bottom: 4em;
+	text-align: center;
+}
+
+#TOC li {
+	list-style: none;
+}
+
+#TOC ul {
+	padding-left: 1.3em;
+}
+
+#TOC>ul {
+	padding-left: 0;
+}
+
+#TOC a:not(:hover) {
+	text-decoration: none;
+}
+
+span.smallcaps {
+	font-variant: small-caps;
+}
+
+div.columns {
+	display: flex;
+	gap: min(4vw, 1.5em);
+}
+
+div.column {
+	flex: auto;
+	overflow-x: auto;
+}
+
+div.hanging-indent {
+	margin-left: 1.5em;
+	text-indent: -1.5em;
+}
+
+ul.task-list[class] {
+	list-style: none;
+}
+
+ul.task-list li input[type="checkbox"] {
+	width: 0.8em;
+	margin: 0 0.8em 0.2em -1.6em;
+	font-size: inherit;
+	vertical-align: middle;
+}
+
+.display.math {
+	display: block;
+	margin: 0.5rem auto;
+	text-align: center;
+}
+
+@media screen and (min-width: 80rem) {
+	body {
+		max-width: 96rem;
+		column-count: 2;
+		column-gap: clamp(2.5rem, 5vw, 5rem);
+		column-fill: balance;
+		column-rule: 1px solid var(--rule);
+	}
+
+	body>h1,
+	body>h2,
+	body>blockquote,
+	body>.document-header,
+	body>nav[aria-label="Contents"],
+	body>.document-subtitle,
+	body>.table-scroll {
+		column-span: all;
+	}
+
+	body>.table-scroll {
+		break-inside: avoid;
+	}
+
+	h3,
+	h4,
+	h5,
+	h6 {
+		break-after: avoid-column;
+	}
+
+	#contents>ul>li {
+		break-inside: avoid-column;
+	}
+}
+
+@media (max-width: 600px) {
+	body {
+		padding: 1rem;
+		font-size: 1rem;
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	.table-scroll {
+		margin-right: -0.25rem;
+		margin-left: -0.25rem;
+	}
+}
+
+@media print {
+	:root {
+		color-scheme: light;
+		--page: #fff;
+		--surface: #fff;
+		--surface-alt: #f3f3f3;
+		--text: #000;
+		--muted: #444;
+		--rule: #777;
+		--accent: #000;
+		--link: #000;
+	}
+
+	body {
+		max-width: none;
+		padding: 0;
+		font-size: 11pt;
+	}
+
+	.table-scroll {
+		overflow: visible;
+		border: 0;
+	}
+
+	table {
+		min-width: 0 !important;
+		font-size: 8.5pt;
+	}
+
+	p,
+	h2,
+	h3 {
+		orphans: 3;
+		widows: 3;
+	}
+
+	h2,
+	h3,
+	h4 {
+		break-after: avoid;
+	}
+}
+
+/* Wealth and tier columns */
+col.col-tier {
+	width: 6rem;
+}
+
+.table--wealth {
+	min-width: 48rem;
+}
+
+.table--wealth :is(th, td):nth-child(1),
+.table--wealth :is(th, td):nth-child(4),
+.table--roll-tier :is(th, td):nth-child(1),
+.table--roll-tier :is(th, td):nth-child(2),
+.table--treasure :is(th, td):nth-child(2) {
+	text-align: center;
+	white-space: nowrap;
+}
+
+.table--wealth :is(th, td):nth-child(2) {
+	text-align: left;
+}
+
+.table--roll-tier {
+	min-width: 44rem;
+}
+
+.table--armor,
+.table--weapons {
+	min-width: 60rem;
+}
+
+.table--catalog {
+	min-width: 42rem;
+}
+
+.table--treasure {
+	min-width: 48rem;
+}
+
+.table--poisons {
+	min-width: 96rem;
+}
+
+.table--poisons :is(th, td):nth-child(1),
+.table--poisons :is(th, td):nth-child(3),
+.table--poisons :is(th, td):nth-child(5) {
+	text-align: left;
+}
+
+.table--poisons :is(th, td):nth-child(2),
+.table--poisons :is(th, td):nth-child(4) {
+	text-align: center;
+	white-space: nowrap;
+}
+
+/* Services, retainers, and transportation */
+.table--services,
+.table--hirelings,
+.table--transportation {
+	min-width: 50rem;
+}
+
+.table--services :is(th, td):nth-child(1),
+.table--hirelings :is(th, td):nth-child(1),
+.table--hirelings :is(th, td):nth-child(2),
+.table--transportation :is(th, td):nth-child(1),
+.table--transportation :is(th, td):nth-child(2) {
+	text-align: left;
+}
+
+.table--services :is(th, td):nth-child(2),
+.table--hirelings :is(th, td):nth-child(3),
+.table--transportation :is(th, td):nth-child(3) {
+	text-align: center;
+	white-space: nowrap;
+}
+
+.table--hirelings,
+.table--transportation {
+	min-width: 66rem;
+}
+
+.stat-block {
+	margin-top: 1.35rem;
+	margin-bottom: 1.35rem;
+	overflow: hidden;
+	break-inside: avoid;
+	border: 1px solid var(--rule);
+	border-left: 0.32rem solid var(--accent);
+	border-radius: 0.5rem;
+	background: var(--surface);
+	box-shadow: 0 0.2rem 0.6rem rgb(0 0 0 / 18%);
+}
+
+.stat-block>:is(h2, h3, h4) {
+	margin: 0;
+	padding: 0.55rem 0.85rem;
+	border-bottom: 1px solid var(--rule);
+	background: #2d2b28;
+	color: #fff3dc;
+	font-size: 1.08rem;
+	letter-spacing: 0.015em;
+}
+
+.stat-block>p {
+	margin: 0.75rem 0.9rem;
+	text-align: left;
+}
+
+.stat-block>.stat-line {
+	margin: 0;
+	padding: 0.62rem 0.85rem;
+	border-bottom: 1px solid var(--rule);
+	background: var(--surface-alt);
+	color: #ded8cd;
+	font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	font-size: 0.88rem;
+	font-style: italic;
+	font-weight: 600;
+	line-height: 1.5;
+	font-variant-numeric: lining-nums tabular-nums;
+	hyphens: none;
+	overflow-wrap: anywhere;
+}
+
+@media print {
+	.stat-block {
+		box-shadow: none;
+	}
+
+	.stat-block>:is(h2, h3, h4) {
+		background: #e7e7e7;
+		color: #000;
+	}
+
+	.stat-block>.stat-line {
+		background: #f3f3f3;
+		color: #111;
+	}
+}
