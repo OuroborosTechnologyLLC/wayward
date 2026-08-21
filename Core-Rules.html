@@ -109,12 +109,12 @@
 										<li><a href="#pilgrim">Pilgrim</a></li>
 										<li><a href="#priest">Priest</a></li>
 										<li><a href="#pugilist">Pugilist</a></li>
+										<li><a href="#rogue">Rogue</a></li>
 										<li><a href="#runner">Runner</a></li>
 										<li><a href="#sage">Sage</a></li>
 										<li><a href="#shaman">Shaman</a></li>
 										<li><a href="#sniper">Skirmisher</a></li>
 										<li><a href="#sorcerer">Sorcerer</a></li>
-										<li><a href="#rogue">Rogue</a></li>
 										<li><a href="#warrior">Warrior</a></li>
 										<li><a href="#professional">Professional</a></li>
 									</ul>
@@ -138,14 +138,6 @@
 								<li><a href="#experience-point-rewards">Experience Point Rewards</a></li>
 								<li><a href="#spending-experience-points">Spending Experience Points</a></li>
 								<li><a href="#skills-and-derived-abilities">Skills and Derived Abilities</a></li>
-							</ul>
-						</li>
-						<li><a href="#patrons-and-contacts">Patrons and Contacts</a>
-							<ul>
-								<li><a href="#recording-connections">Recording Connections</a></li>
-								<li><a href="#favor-and-debt">Favor and Debt</a></li>
-								<li><a href="#network-advances">Network Advances</a></li>
-								<li><a href="#strained-connections">Strained Connections</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -179,7 +171,11 @@
 						<li><a href="#armor">Armor</a></li>
 						<li><a href="#common-weapons">Common Weapons</a></li>
 						<li><a href="#general-equipment">General Equipment</a></li>
-						<li><a href="#optional-rule-encumbrance">Optional Rule: Encumbrance</a></li>
+						<li><a href="#optional-rule-encumbrance">Optional Rule: Encumbrance</a>
+							<ul>
+								<li><a href="#treasure-encumbrance">Treasure Encumbrance</a></li>
+							</ul>
+						</li>
 						<li><a href="#apothecary-preparations">Apothecary Preparations</a>
 							<ul>
 								<li><a href="#poisons">Poisons</a>
@@ -259,6 +255,14 @@
 								<li><a href="#resolve">Resolve</a></li>
 								<li><a href="#horror-rolls">Horror Rolls</a></li>
 								<li><a href="#repeated-horror">Repeated Horror</a></li>
+							</ul>
+						</li>
+						<li><a href="#patrons-and-contacts">Patrons and Contacts</a>
+							<ul>
+								<li><a href="#recording-connections">Recording Connections</a></li>
+								<li><a href="#favor-and-debt">Favor and Debt</a></li>
+								<li><a href="#network-advances">Network Advances</a></li>
+								<li><a href="#strained-connections">Strained Connections</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -573,7 +577,7 @@
 		</div>
 		<p>Applies to searches, research, repairs, crafting, lockpicking, and similar tasks. Does not apply to attacks, Initiative, Surprise, resistance throws, throws to keep fighting, spellcasting, or processes whose duration cannot change.</p>
 		<h1 id="characters">Characters</h1>
-		<p>Rules for character creation, advancement, and Connections.</p>
+		<p>Rules for character creation and advancement.</p>
 		<h2 id="character-creation">Character Creation</h2>
 		<ol type="1">
 			<li>Choose a character concept.</li>
@@ -581,6 +585,7 @@
 			<li>Choose one Archetype: the character’s training, former occupation, or social position.</li>
 <li>If Combat is 2+, choose one Combat Move per level above 1. Meet each Move’s minimum Combat rating.</li>
 			<li>Record Stamina equal to 14 + three times Physical, Defense equal to 8 + half Combat (rounded up), and Resolve 0.</li>
+			<li>Mark Connection Slots equal to 3 + Social on the character sheet. Review <a href="#patrons-and-contacts">Patrons and Contacts</a> in the Gameplay and Exploration chapter later.</li>
 			<li>Begin with food and water for 3 days, a backpack, a waterskin, and a knife. Choose additional gear using the Starting Equipment rules described later in the chapter. Begin at Wealth Tier 2 (Poor) with 1 WP.</li>
 			<li>If Lore is 1+, choose one spell per Lore level. Sorcerers gain their Archetype’s additional spells.</li>
 			<li>Choose a name and appearance. Briefly describe why the character left their former life and what now draws them toward danger.</li>
@@ -678,6 +683,9 @@
 		<h4 id="pugilist">Pugilist</h4>
 		<p>You understand unarmed contests, holds, training, crowds, injuries, and fighting houses. Your unarmed attacks inflict 2d6 damage instead of 1d6.</p>
 		<p>You may identify fighting styles, enter fighting venues, and find trainers, gamblers, promoters, or rivals.</p>
+		<h4 id="rogue">Rogue</h4>
+		<p>You understand confidence tricks, disguises, forgery, bribery, smuggling, blackmail, gambling, illicit markets, criminal signals, and underworld hierarchies. In familiar criminal surroundings, you can observe local etiquette, recognize common schemes, and locate routine illicit goods or services without a throw.</p>
+		<p>You may attempt elaborate cons, maintain false identities, forge convincing documents, move contraband, compromise officials, or negotiate between criminal groups. You may know fences, smugglers, fixers, informants, corrupt officials, gangs, or people who owe dangerous favors.</p>
 		<h4 id="runner">Runner</h4>
 		<p>You understand pacing, routes, fatigue, footwear, obstacles, messages, and relays. You can judge sustainable speed and maintain an ordinary courier’s pace without a throw.</p>
 		<p>You may attempt extreme journeys, dangerous climbs, rapid crossings, or delivery through hostile territory. You may know roads, shortcuts, relay stations, messengers, scouts, or information brokers.</p>
@@ -694,9 +702,6 @@
 		<h4 id="sorcerer">Sorcerer</h4>
 		<p>You understand magical terms, rituals, grimoires, and sorcerous traditions. You can identify common ritual materials and obvious spellcraft without a throw.</p>
 		<p>Begin with three additional spells from the general Spells lists. Lore 1 is required to cast them or learn more. You may interpret unfamiliar magic, seek occult instruction, or identify a working’s tradition. You may have rivals, creditors, obligations, or a demanding master.</p>
-		<h4 id="rogue">Rogue</h4>
-		<p>You understand confidence tricks, disguises, forgery, bribery, smuggling, blackmail, gambling, illicit markets, criminal signals, and underworld hierarchies. In familiar criminal surroundings, you can observe local etiquette, recognize common schemes, and locate routine illicit goods or services without a throw.</p>
-		<p>You may attempt elaborate cons, maintain false identities, forge convincing documents, move contraband, compromise officials, or negotiate between criminal groups. You may know fences, smugglers, fixers, informants, corrupt officials, gangs, or people who owe dangerous favors.</p>
 		<h4 id="warrior">Warrior</h4>
 		<p>You understand weapons, armor, formations, watches, camps, supply, morale, customs, and trained fighters. You can assess arms, organize a military camp, and drill willing combatants without a throw.</p>
 		<p>You may recognize tactics, negotiate with military groups, and claim other warriors’ regard or hostility. Gain two additional Combat Moves for which you qualify.</p>
@@ -767,7 +772,7 @@
 		</ul>
 		<h2 id="experience">Experience</h2>
 		<p>Track <strong>total earned XP</strong> and <strong>available XP</strong>. Spending reduces available XP only.</p>
-		<p>When total earned XP first reaches 5, 10, 15, and 20, increase the character’s current Resolve by 1 and gain one Network Advance. See the Network Advances section in Patrons and Contacts chapter for more information. Spending XP never reduces total earned XP and cannot remove these increases or Network Advances.</p>
+		<p>When total earned XP first reaches 5, 10, 15, and 20, increase the character’s current Resolve by 1 and gain one Network Advance. See Network Advances under <a href="#patrons-and-contacts">Patrons and Contacts</a> in the Gameplay and Exploration chapter. Spending XP never reduces total earned XP and cannot remove these increases or Network Advances.</p>
 		<h3 id="experience-point-rewards">Experience Point Rewards</h3>
 		<p>Each character gains 1 XP after an adventure, regardless of success. The Referee may grant these bonuses:</p>
 		<div class="table-scroll" role="region" aria-label="Table: Player Action, Bonus XP" tabindex="0">
@@ -870,107 +875,6 @@
 		<h3 id="skills-and-derived-abilities">Skills and Derived Abilities</h3>
 <p>Increasing Combat above 1 grants its Combat Move. Increasing Lore grants one spell. Increasing Physical recalculates Stamina.</p>
 		<p>Stamina cannot be bought or increased directly; only Physical increases it permanently.</p>
-		<h2 id="patrons-and-contacts">Patrons and Contacts</h2>
-		<p>A <strong>Contact</strong> provides one defined service within limited reach. A <strong>Patron</strong> is a powerful person or organization offering broader aid for greater obligations. Both are <strong>Connections</strong>.</p>
-		<p>Connections provide concrete access or aid, not modifiers or automatic success. Their means and interests still limit them.</p>
-		<p>New players do not start with meaningful Contacts or Patrons, but soon after play begins one or multiple may be presented.</p>
-		<aside class="referee-guidance" aria-label="Referee guidance">
-			<p class="referee-guidance__label">Referee Guidance</p>
-			<p>An introductory adventure is a great time to introduce a Patron or Contact, and when the characters complete it, it is appropriate to allow characters to choose to receive the quest-giver as a Contact.</p>
-		</aside>
-		<h3 id="recording-connections">Recording Connections</h3>
-		<p>Connection Slots equal <strong>3 + Social</strong>. A Contact uses one; a Patron uses two. Acquaintances and hirelings use none. To exceed the limit, drop a Connection or take <strong>Wider Circle</strong>.</p>
-		<p>Record:</p>
-		<ul class="incremental">
-			<li><p><strong>Name and role.</strong></p></li>
-			<li><p><strong>Reach:</strong> where or among whom they can act.</p></li>
-			<li><p><strong>Service:</strong> one kind of aid for a Contact; one sphere and two example services for a Patron.</p></li>
-			<li><p><strong>Interest:</strong> what they protect, want, or expect.</p></li>
-			<li><p><strong>Ledger:</strong> three Favor boxes, one Debt box, and status.</p></li>
-		</ul>
-		<p>An NPC becomes a Connection after the relationship is established, both sides want it to continue, and the Referee approves its Service and Reach. Money alone is insufficient.</p>
-		<h3 id="favor-and-debt">Favor and Debt</h3>
-		<p>Routine, costless aid is free. Spend Favor when a Connection spends resources, takes a risk, or uses influence:</p>
-		<div class="table-scroll" role="region" aria-label="Table: Favor Cost, Scale, Examples" tabindex="0">
-			<table class="table--favor">
-				<colgroup>
-					<col class="col-number">
-					<col class="col-label">
-					<col class="col-text">
-				</colgroup>
-				<thead>
-					<tr>
-						<th>Favor</th>
-						<th>Scale</th>
-						<th>Examples</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>1</td>
-						<td>Inconvenient</td>
-						<td>Arrange an introduction, share a guarded rumor, find a buyer, provide a night’s concealment.</td>
-					</tr>
-					<tr>
-						<td>2</td>
-						<td>Costly or risky</td>
-						<td>Hide a wanted person, obtain a scarce item, lend a specialist, compromise a minor official.</td>
-					</tr>
-					<tr>
-						<td>3</td>
-						<td>Grave</td>
-						<td>Risk ruin or bloodshed, reveal a protected secret, mobilize armed followers, defy a powerful rival.</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<p>Within Service and Reach, Favor secures sincere cooperation without a Social throw, not automatic success. The Referee sets time, limits, and any further throws.</p>
-		<p>Without enough Favor, a Connection may provide 1-Favor aid for marked Debt. It extends no more credit until cleared. Fulfilling a called Debt clears it but earns no Favor; refusal causes Strain.</p>
-		<p>After an adventure, gain 1 Favor for advancing the Connection’s Interest, completing unpaid service, or accepting a meaningful cost. Gain 2 for saving it from ruin, captivity, or death. Maximum 3.</p>
-		<h3 id="network-advances">Network Advances</h3>
-		<p>At each total earned XP threshold, choose one Network Advance. The Referee may also award one after a milestone that changes the character’s place in the world.</p>
-		<ul class="incremental">
-			<li><p><strong>Wider Circle:</strong> Gain one Connection Slot, to a maximum of 5 + Social.</p></li>
-			<li><p><strong>Trusted Ally:</strong> Broaden one Service or increase its Reach one step. Each Connection may take this once.</p></li>
-			<li><p><strong>Renown:</strong> Name a region, culture, or faction and what the character is known for. Gain fitting audiences, shelter, information, and contracts, but also recognition, rivals, or obligations. Renown grants no modifier.</p></li>
-		</ul>
-		<p>Advances require an established cause. Connections may otherwise be gained, changed, or lost in play.</p>
-		<h3 id="strained-connections">Strained Connections</h3>
-		<p>Mark <strong>Strained</strong> for ignoring an urgent plea, leaving called Debt unpaid, violating Interest, betraying confidence, or causing serious danger. Absence alone does not count.</p>
-		<p>If the result is uncertain, throw 1d6 at the end of the adventure or faction turn:</p>
-		<div class="table-scroll" role="region" aria-label="Table: Strained Connection Throw, Result" tabindex="0">
-			<table class="table--connections">
-				<colgroup>
-					<col class="col-number-wide">
-					<col class="col-text">
-				</colgroup>
-				<thead>
-					<tr>
-						<th>1d6</th>
-						<th>Result</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>1</td>
-						<td><strong>Broken:</strong> Lost, hostile, disappeared, or dead. Cross it out.</td>
-					</tr>
-					<tr>
-						<td>2–3</td>
-						<td><strong>Cold:</strong> Refuses aid until the relationship is repaired in play.</td>
-					</tr>
-					<tr>
-						<td>4–5</td>
-						<td><strong>Price:</strong> Erase one Favor. If none remains, mark Debt; if Debt is already marked, the Connection goes Cold.</td>
-					</tr>
-					<tr>
-						<td>6</td>
-						<td><strong>Holds:</strong> Clear Strain; the underlying trouble may remain.</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<p>Favor may secure personal intervention or temporary use of a suitable faction Asset, not control of the faction.</p>
 		<h1 id="equipment">Equipment</h1>
 		<p>Rules for Wealth, gear, medicines, poisons, services, hirelings, and transport. Character creation specific rules are described in the Starting Equipment section of the Characters chapter.</p>
 		<h2 id="wealth">Wealth</h2>
@@ -1288,9 +1192,29 @@
 				</thead>
 				<tbody>
 					<tr>
+						<td>Small backpack</td>
+						<td>1</td>
+						<td>Carries 2 items without Encumbrance.</td>
+					</tr>
+					<tr>
 						<td>Backpack</td>
 						<td>2</td>
-						<td>Can carry 4 Items without encumbrance</td>
+						<td>Carries 4 items without Encumbrance.</td>
+					</tr>
+					<tr>
+						<td>Large backpack</td>
+						<td>3</td>
+						<td>Carries 6 items without Encumbrance.</td>
+					</tr>
+					<tr>
+						<td>Small sack</td>
+						<td>1</td>
+						<td>Holds 1 bundle (1/5 WP). Counts as 1 item when filled.</td>
+					</tr>
+					<tr>
+						<td>Large sack</td>
+						<td>1</td>
+						<td>Holds 5 bundles (1 WP). Counts as 5 items and requires two hands when filled.</td>
 					</tr>
 					<tr>
 						<td>Bedroll</td>
@@ -1397,6 +1321,13 @@
 		</div>
 		<h2 id="optional-rule-encumbrance">Optional Rule: Encumbrance</h2>
 		<p>A character’s item limit is 10 + twice Physical. Above this limit, halve movement. A character cannot carry more than twice the limit. Tiny items, worn clothes, and backpacks do not count. Twenty arrows or 6 torches count as 1 item; a heavy weapon or medium armor as 2; heavy armor as 3.</p>
+		<h3 id="treasure-encumbrance">Treasure Encumbrance</h3>
+		<p>Treasure counts toward Encumbrance until secured in a settlement, stronghold, or other safe repository. Banked WP do not.</p>
+		<p>Each typically sized, unbanked WP fills 5 item spaces, divided into five 1-space bundles. Apply Encumbrance normally. Five secured bundles add 1 WP to Wealth.</p>
+		<aside class="referee-guidance" aria-label="Referee guidance">
+			<p class="referee-guidance__label">Referee Guidance</p>
+			<p>Five spaces represent sacks of mixed treasure, not a fixed weight. Compact treasure may fill 1 space per WP; bulky treasure may fill 10 or more. State unusual bulk when found. Lost, abandoned, or destroyed bundles grant no WP.</p>
+		</aside>
 		<h2 id="apothecary-preparations">Apothecary Preparations</h2>
 		<p>Each preparation is one dose. Administering it takes one Combat Action unless stated otherwise. Multiple doses of the same preparation do not stack.</p>
 		<div class="table-scroll" role="region" aria-label="Table: Preparation, Tier, Effect" tabindex="0">
@@ -2937,7 +2868,7 @@
 			</table>
 		</div>
 		<h1 id="gameplay-exploration">Gameplay and Exploration</h1>
-		<p>Rules for wilderness and underground exploration.</p>
+		<p>Rules for travel, exploration, Horror, and Connections.</p>
 		<h2 id="fatigue">Fatigue</h2>
 		<p>A Fatigued character suffers -1 to all actions and moves at most 10m per round. Fatigue is separate from Stamina.</p>
 		<h2 id="overland-map-and-movement">Overland Map and Movement</h2>
@@ -3082,6 +3013,107 @@
 		<h3 id="repeated-horror">Repeated Horror</h3>
 		<p>Each creature or phenomenon normally causes one Horror roll per character per adventure. Roll again only after substantial escalation, revelation, or new circumstances—not for remaining in the same scene.</p>
 		<p><em>Examples: a horde arrives, an ally is revealed as one of them, the Horror assumes a worse form, or it returns by surprise.</em></p>
+		<h2 id="patrons-and-contacts">Patrons and Contacts</h2>
+		<p>A <strong>Contact</strong> provides one defined service within limited reach. A <strong>Patron</strong> is a powerful person or organization offering broader aid for greater obligations. Both are <strong>Connections</strong>.</p>
+		<p>Connections provide concrete access or aid, not modifiers or automatic success. Their means and interests still limit them.</p>
+		<p>New players do not start with meaningful Contacts or Patrons, but soon after play begins one or multiple may be presented.</p>
+		<aside class="referee-guidance" aria-label="Referee guidance">
+			<p class="referee-guidance__label">Referee Guidance</p>
+			<p>An introductory adventure is a great time to introduce a Patron or Contact, and when the characters complete it, it is appropriate to allow characters to choose to receive the quest-giver as a Contact.</p>
+		</aside>
+		<h3 id="recording-connections">Recording Connections</h3>
+		<p>Connection Slots equal <strong>3 + Social</strong>. A Contact uses one; a Patron uses two. Acquaintances and hirelings use none. To exceed the limit, drop a Connection or take <strong>Wider Circle</strong>.</p>
+		<p>Record:</p>
+		<ul class="incremental">
+			<li><p><strong>Name and role.</strong></p></li>
+			<li><p><strong>Reach:</strong> where or among whom they can act.</p></li>
+			<li><p><strong>Service:</strong> one kind of aid for a Contact; one sphere and two example services for a Patron.</p></li>
+			<li><p><strong>Interest:</strong> what they protect, want, or expect.</p></li>
+			<li><p><strong>Ledger:</strong> three Favor boxes, one Debt box, and status.</p></li>
+		</ul>
+		<p>An NPC becomes a Connection after the relationship is established, both sides want it to continue, and the Referee approves its Service and Reach. Money alone is insufficient.</p>
+		<h3 id="favor-and-debt">Favor and Debt</h3>
+		<p>Routine, costless aid is free. Spend Favor when a Connection spends resources, takes a risk, or uses influence:</p>
+		<div class="table-scroll" role="region" aria-label="Table: Favor Cost, Scale, Examples" tabindex="0">
+			<table class="table--favor">
+				<colgroup>
+					<col class="col-number">
+					<col class="col-label">
+					<col class="col-text">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>Favor</th>
+						<th>Scale</th>
+						<th>Examples</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Inconvenient</td>
+						<td>Arrange an introduction, share a guarded rumor, find a buyer, provide a night’s concealment.</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Costly or risky</td>
+						<td>Hide a wanted person, obtain a scarce item, lend a specialist, compromise a minor official.</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Grave</td>
+						<td>Risk ruin or bloodshed, reveal a protected secret, mobilize armed followers, defy a powerful rival.</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<p>Within Service and Reach, Favor secures sincere cooperation without a Social throw, not automatic success. The Referee sets time, limits, and any further throws.</p>
+		<p>Without enough Favor, a Connection may provide 1-Favor aid for marked Debt. It extends no more credit until cleared. Fulfilling a called Debt clears it but earns no Favor; refusal causes Strain.</p>
+		<p>After an adventure, gain 1 Favor for advancing the Connection’s Interest, completing unpaid service, or accepting a meaningful cost. Gain 2 for saving it from ruin, captivity, or death. Maximum 3.</p>
+		<h3 id="network-advances">Network Advances</h3>
+		<p>At each total earned XP threshold, choose one Network Advance. The Referee may also award one after a milestone that changes the character’s place in the world.</p>
+		<ul class="incremental">
+			<li><p><strong>Wider Circle:</strong> Gain one Connection Slot, to a maximum of 5 + Social.</p></li>
+			<li><p><strong>Trusted Ally:</strong> Broaden one Service or increase its Reach one step. Each Connection may take this once.</p></li>
+			<li><p><strong>Renown:</strong> Name a region, culture, or faction and what the character is known for. Gain fitting audiences, shelter, information, and contracts, but also recognition, rivals, or obligations. Renown grants no modifier.</p></li>
+		</ul>
+		<p>Advances require an established cause. Connections may otherwise be gained, changed, or lost in play.</p>
+		<h3 id="strained-connections">Strained Connections</h3>
+		<p>Mark <strong>Strained</strong> for ignoring an urgent plea, leaving called Debt unpaid, violating Interest, betraying confidence, or causing serious danger. Absence alone does not count.</p>
+		<p>If the result is uncertain, throw 1d6 at the end of the adventure or faction turn:</p>
+		<div class="table-scroll" role="region" aria-label="Table: Strained Connection Throw, Result" tabindex="0">
+			<table class="table--connections">
+				<colgroup>
+					<col class="col-number-wide">
+					<col class="col-text">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>1d6</th>
+						<th>Result</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td><strong>Broken:</strong> Lost, hostile, disappeared, or dead. Cross it out.</td>
+					</tr>
+					<tr>
+						<td>2–3</td>
+						<td><strong>Cold:</strong> Refuses aid until the relationship is repaired in play.</td>
+					</tr>
+					<tr>
+						<td>4–5</td>
+						<td><strong>Price:</strong> Erase one Favor. If none remains, mark Debt; if Debt is already marked, the Connection goes Cold.</td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td><strong>Holds:</strong> Clear Strain; the underlying trouble may remain.</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<p>Favor may secure personal intervention or temporary use of a suitable faction Asset, not control of the faction.</p>
 		<h1 id="monsters">Monsters</h1>
 		<p>Common monsters and NPCs.</p>
 		<h2 id="reactions">Reactions</h2>
