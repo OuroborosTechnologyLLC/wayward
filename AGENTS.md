@@ -29,6 +29,10 @@ Wayward is a rules-light sword-and-sorcery tabletop RPG. Preserve its concise, p
 - Reuse existing table classes and column classes.
 - Give every heading a unique, descriptive `id`.
 - Include every `h1`, `h2`, `h3`, `h4`, and `h5` heading in the table of contents, nested to reflect the document hierarchy.
+- Use `unnumbered` alone on a heading that should remain in the table of contents without a section number, such as front matter.
+- Use both `unnumbered` and `unlisted` on a heading that must remain a semantic heading with a stable anchor but must not be numbered or included in generated tables of contents: `<h4 class="unnumbered unlisted" id="descriptive-id">Title</h4>`.
+- Do not use `unlisted` alone; the LaTeX export may still include a numbered heading in its table of contents.
+- Number tables within each chapter as `Table 3.1`, `Table 3.2`, and so on. Keep the visible table label, wrapper `aria-label`, and index-of-tables entry identical.
 - Update the table of contents whenever sections or headings are added, removed, renamed, or moved.
 - Ensure every table-of-contents link has a matching heading ID.
 - Format Referee-only material as `<aside class="referee-guidance" aria-label="Referee guidance">`, include the `referee-guidance__label`.
@@ -53,5 +57,5 @@ After changing the HTML:
 - Parse it with Pandoc to catch structural problems.
 - Check for duplicate IDs.
 - Check that all table-of-contents links resolve.
-- Check that every `h1` through `h5` heading appears in the table of contents.
+- Check that every `h1` through `h5` heading appears in the table of contents unless it is `unlisted`; confirm `unnumbered`-only headings remain listed and headings with both classes do not appear.
 - Confirm copied tables have the expected number and order of rows.

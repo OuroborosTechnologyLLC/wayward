@@ -64,7 +64,7 @@ for requested_input in "${inputs[@]}"; do
         --to=latex \
         --standalone \
         --toc \
-        --toc-depth=2 \
+        --toc-depth=5 \
         --number-sections \
         --top-level-division=chapter \
         --variable=documentclass:book \
@@ -86,11 +86,12 @@ for requested_input in "${inputs[@]}"; do
 
     printf 'Converting %s to %s\n' "$input_name" "$(basename -- "$epub_path")"
     pandoc "$input" \
-        --from=html \
-        --to=epub3 \
+        --from=html+raw_html \
+        --to=epub3+raw_html \
         --standalone \
         --toc \
-        --toc-depth=2 \
+        --toc-depth=5 \
+        --number-sections \
         --split-level=1 \
         --metadata=lang:en \
         --resource-path="$input_dir:$script_dir" \

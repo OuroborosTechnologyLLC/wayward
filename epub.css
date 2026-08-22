@@ -32,6 +32,95 @@ blockquote {
 	border-left: 0.22em solid currentColor;
 }
 
+.referee-guidance {
+	margin: 1.25em 0;
+	padding: 0.75em 0;
+	border-top: 0.12em solid currentColor;
+	border-bottom: 0.12em solid currentColor;
+	page-break-inside: avoid;
+}
+
+.referee-guidance > p {
+	margin: 0.5em 0;
+}
+
+.referee-guidance > .referee-guidance__label,
+.referee-guidance > p:first-child {
+	margin-top: 0;
+	font-family: sans-serif;
+	font-size: 0.8em;
+	font-weight: bold;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.referee-guidance > :last-child {
+	margin-bottom: 0;
+}
+
+#contents > ul > li,
+#table-index > ul > li,
+#toc > ol.toc > li {
+	break-inside: avoid;
+}
+
+#contents > ul {
+	counter-reset: toc-chapter;
+}
+
+#contents > ul > li:not(:first-child) {
+	counter-increment: toc-chapter;
+}
+
+#contents > ul > li:not(:first-child) > a::before {
+	content: counter(toc-chapter) ". ";
+}
+
+#contents > ul > li:not(:first-child) > ul {
+	counter-reset: toc-section;
+}
+
+#contents > ul > li:not(:first-child) > ul > li {
+	counter-increment: toc-section;
+}
+
+#contents > ul > li:not(:first-child) > ul > li > a::before {
+	content: counter(toc-chapter) "." counter(toc-section) " ";
+}
+
+#contents > ul > li:not(:first-child) > ul > li > ul {
+	counter-reset: toc-subsection;
+}
+
+#contents > ul > li:not(:first-child) > ul > li > ul > li {
+	counter-increment: toc-subsection;
+}
+
+#contents > ul > li:not(:first-child) > ul > li > ul > li > a::before {
+	content: counter(toc-chapter) "." counter(toc-section) "." counter(toc-subsection) " ";
+}
+
+#contents > ul > li:not(:first-child) > ul > li > ul > li > ul {
+	counter-reset: toc-subsubsection;
+}
+
+#contents > ul > li:not(:first-child) > ul > li > ul > li > ul > li {
+	counter-increment: toc-subsubsection;
+}
+
+#contents > ul > li:not(:first-child) > ul > li > ul > li > ul > li > a::before {
+	content: counter(toc-chapter) "." counter(toc-section) "." counter(toc-subsection) "." counter(toc-subsubsection) " ";
+}
+
+@media (min-width: 40em) {
+	#contents > ul,
+	#table-index > ul,
+	#toc > ol.toc {
+		column-count: 2;
+		column-gap: 2em;
+	}
+}
+
 img,
 svg {
 	max-width: 100%;
@@ -47,6 +136,14 @@ table {
 .table-scroll {
 	display: block;
 	overflow-x: auto;
+}
+
+.table-caption {
+	margin: 0;
+	padding: 0.5em;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: left;
 }
 
 table {

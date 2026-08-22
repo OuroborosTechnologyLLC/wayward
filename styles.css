@@ -25,6 +25,7 @@ body {
 	margin: 0 auto;
 	max-width: 82rem;
 	padding: clamp(1.25rem, 4vw, 4rem);
+	counter-reset: chapter;
 	font-family: Georgia, "Times New Roman", serif;
 	font-size: 1.05rem;
 	line-height: 1.68;
@@ -32,6 +33,50 @@ body {
 	overflow-wrap: break-word;
 	text-rendering: optimizeLegibility;
 	font-kerning: normal;
+}
+
+h1:not(.unnumbered) {
+	counter-increment: chapter;
+	counter-reset: section;
+}
+
+h2:not(.unnumbered) {
+	counter-increment: section;
+	counter-reset: subsection;
+}
+
+h3:not(.unnumbered) {
+	counter-increment: subsection;
+	counter-reset: subsubsection;
+}
+
+h4:not(.unnumbered) {
+	counter-increment: subsubsection;
+	counter-reset: paragraph-section;
+}
+
+h5:not(.unnumbered) {
+	counter-increment: paragraph-section;
+}
+
+h1:not(.unnumbered)::before {
+	content: counter(chapter) ". ";
+}
+
+h2:not(.unnumbered)::before {
+	content: counter(chapter) "." counter(section) " ";
+}
+
+h3:not(.unnumbered)::before {
+	content: counter(chapter) "." counter(section) "." counter(subsection) " ";
+}
+
+h4:not(.unnumbered)::before {
+	content: counter(chapter) "." counter(section) "." counter(subsection) "." counter(subsubsection) " ";
+}
+
+h5:not(.unnumbered)::before {
+	content: counter(chapter) "." counter(section) "." counter(subsection) "." counter(subsubsection) "." counter(paragraph-section) " ";
 }
 
 body> :not(.table-scroll) {
@@ -199,6 +244,72 @@ blockquote> :last-child {
 	margin-bottom: 0;
 }
 
+#contents,
+#table-index {
+	max-width: 80rem;
+}
+
+#contents>ul {
+	counter-reset: toc-chapter;
+}
+
+#contents>ul>li:not(:first-child) {
+	counter-increment: toc-chapter;
+}
+
+#contents>ul>li:not(:first-child)>a::before {
+	content: counter(toc-chapter) ". ";
+}
+
+#contents>ul>li:not(:first-child)>ul {
+	counter-reset: toc-section;
+}
+
+#contents>ul>li:not(:first-child)>ul>li {
+	counter-increment: toc-section;
+}
+
+#contents>ul>li:not(:first-child)>ul>li>a::before {
+	content: counter(toc-chapter) "." counter(toc-section) " ";
+}
+
+#contents>ul>li:not(:first-child)>ul>li>ul {
+	counter-reset: toc-subsection;
+}
+
+#contents>ul>li:not(:first-child)>ul>li>ul>li {
+	counter-increment: toc-subsection;
+}
+
+#contents>ul>li:not(:first-child)>ul>li>ul>li>a::before {
+	content: counter(toc-chapter) "." counter(toc-section) "." counter(toc-subsection) " ";
+}
+
+#contents>ul>li:not(:first-child)>ul>li>ul>li>ul {
+	counter-reset: toc-subsubsection;
+}
+
+#contents>ul>li:not(:first-child)>ul>li>ul>li>ul>li {
+	counter-increment: toc-subsubsection;
+}
+
+#contents>ul>li:not(:first-child)>ul>li>ul>li>ul>li>a::before {
+	content: counter(toc-chapter) "." counter(toc-section) "." counter(toc-subsection) "." counter(toc-subsubsection) " ";
+}
+
+#contents>ul>li,
+#table-index>ul>li {
+	break-inside: avoid-column;
+}
+
+@media screen and (min-width: 48rem) {
+	#contents>ul,
+	#table-index>ul {
+		column-count: 2;
+		column-gap: clamp(2rem, 4vw, 4rem);
+	}
+}
+
 hr {
 	height: 1px;
 	margin-top: 2rem;
@@ -261,11 +372,16 @@ table {
 	font-variant-numeric: lining-nums tabular-nums;
 }
 
-caption {
+caption,
+.table-caption {
 	padding: 0.75rem 1rem;
 	color: var(--muted);
 	font-weight: 600;
 	text-align: left;
+}
+
+.table-caption {
+	margin: 0;
 }
 
 thead {
@@ -457,6 +573,7 @@ ul.task-list li input[type="checkbox"] {
 	body>blockquote,
 	body>.document-header,
 	body>nav[aria-label="Contents"],
+	body>nav[aria-label="Index of Tables"],
 	body>.document-subtitle,
 	body>.table-scroll {
 		column-span: all;
