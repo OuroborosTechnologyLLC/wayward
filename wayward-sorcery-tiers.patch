@@ -1,0 +1,424 @@
+--- a/Core-Rules.html
++++ b/Core-Rules.html
+@@ -226,9 +226,9 @@
+ 								<li><a href="#divine-spells">Divine Spells</a></li>
+ 							</ul>
+ 						</li>
+-						<li><a href="#spells">Spells</a>
++						<li><a href="#spells">General Spells</a>
+ 							<ul>
+-								<li><a href="#alternate-spell-list">Alternate List</a></li>
++								<li><a href="#alternate-spell-list">Lesser and Greater Spells</a></li>
+ 							</ul>
+ 						</li>
+ 					</ul>
+@@ -766,7 +766,7 @@
+ 			<p>Consider bringing coins, tokens, or chits to track both individual player and group pools. Take spent tokens to reduce confusion and "accidental" overspending.</p>
+ 		</aside>
+ 		<ul class="incremental">
+-			<li><p>Reroll one throw, including damage, and take the better result.</p></li>
++			<li><p>Reroll one throw other than a spellcasting throw, including damage, and take the better result.</p></li>
+ 			<li><p>Make the Referee reroll one NPC throw, including damage. The second result stands.</p></li>
+ 			<li><p>Reroll one Triage or Sorcery mishap roll and take the better result.</p></li>
+ 		</ul>
+@@ -2339,15 +2339,43 @@
+ 		<h2 id="reading-and-sensing-magic">Reading and Sensing Magic</h2>
+ 		<p>A character with Lore may throw Lore 8+ to sense nearby magic or read magical inscriptions.</p>
+ 		<h2 id="learning-new-spells">Learning New Spells</h2>
+-		<p>A character with Lore 1+ may learn a general spell from a tome. Each attempt takes one week and requires Lore 8+. A natural 2 destroys that spell’s formula, not the tome. A natural 2 or modified total of 4 or less also causes a Mishap.</p>
++		<p>A character with Lore 1+ may learn a general spell from a tome. Each attempt takes one week and uses the spell’s casting difficulty. A natural 2 destroys that spell’s formula, not the tome. A natural 2 or failure by 4+ also causes a Mishap. A Forbidden spell’s Mishap is resolved as described under Critical Failures.</p>
+ 		<h2 id="spellcasting">Spellcasting</h2>
+-		<p>A character with Lore 1+ may cast a known spell from the general Spells lists. There is no daily limit. Throw Lore 8+.</p>
++		<p>A character with Lore 1+ may cast a known spell from the general Spells lists. There is no daily limit. Each spell belongs to one of three tiers:</p>
++		<div class="table-scroll" role="region" aria-label="Table: Sorcery Tier, Lore Throw, Mishap" tabindex="0">
++			<table class="table--label-number">
++				<thead>
++					<tr>
++						<th>Sorcery Tier</th>
++						<th>Lore Throw</th>
++						<th>Mishap</th>
++					</tr>
++				</thead>
++				<tbody>
++					<tr>
++						<td>Lesser</td>
++						<td>8+</td>
++						<td>Roll once</td>
++					</tr>
++					<tr>
++						<td>Greater</td>
++						<td>10+</td>
++						<td>Roll once</td>
++					</tr>
++					<tr>
++						<td>Forbidden</td>
++						<td>12+</td>
++						<td>Roll twice; suffer the worse result</td>
++					</tr>
++				</tbody>
++			</table>
++		</div>
+ 		<p>Casting takes 10 minutes. Hasty casting takes one combat round and suffers modifier −2. A natural 12 always succeeds.</p>
+ 		<p>On success, the spell takes effect at the end of its 10-minute turn or combat round, after all other actions that round.</p>
+ 		<p>Each spell lists its range after its name.</p>
+ 		<p><em>Example: Respite (range: touch) requires touching the target.</em></p>
+ 		<h3 id="critical-failures">Critical Failures</h3>
+-		<p>A natural 2 or failure by 4+ critically fails. The spell fails and the caster rolls on the Mishap table.</p>
++		<p>A natural 2 or failure by 4+ critically fails. The spell fails and the caster rolls on the Mishap table. For a Forbidden spell, roll twice and suffer the result the Referee judges worse. Hero Points cannot reroll a spellcasting throw, but may reroll one Mishap result normally.</p>
+ 		<div class="table-scroll" role="region" aria-label="Table: d66, Spellcasting Mishap" tabindex="0">
+ 			<table class="table--roll">
+ 				<colgroup>
+@@ -2579,8 +2607,8 @@
+ 				</tbody>
+ 			</table>
+ 		</div>
+-		<h2 id="spells">Spells</h2>
+-		<p>Choose a spell or roll d66.</p>
++		<h2 id="spells">General Spells</h2>
++		<p>Choose a spell or roll d66. The following table contains Lesser, Greater, and Forbidden sorcery; each spell’s tier appears after its name.</p>
+ 		<div class="table-scroll" role="region" aria-label="Table: d66, Spell" tabindex="0">
+ 			<table class="table--roll">
+ 				<colgroup>
+@@ -2597,224 +2625,224 @@
+ 					<tr>
+ 						<td>11</td>
+ 						<td>
+-							<strong>Call Leviathan</strong> (range: 300m): Only castable near or on a large body of water. A giant octopus appears near the sorcerer and serves the sorcerer until the next dawn or dusk (whichever is later).
++							<strong>Call Leviathan</strong> (<em>Greater</em>; range: 300m): Only castable near or on a large body of water. A giant octopus appears near the sorcerer and serves the sorcerer until the next dawn or dusk (whichever is later).
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>12</td>
+ 						<td>
+-							<strong>Call of the Fang</strong> (range: 50m): summons 2d6 animals (such as wolves or giant lizards) to serve the sorcerer until the next dawn or dusk (whichever is later).
++							<strong>Call of the Fang</strong> (<em>Greater</em>; range: 50m): summons 2d6 animals (such as wolves or giant lizards) to serve the sorcerer until the next dawn or dusk (whichever is later).
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>13</td>
+ 						<td>
+-							<strong>Choking Grip</strong> (range: 10m): victim must throw Physical 8+ or be telekinetically gripped, suffering 1d6 damage per round and unable to act. The victim may throw Physical 8+ every following round to break free.
++							<strong>Choking Grip</strong> (<em>Greater</em>; range: 10m): victim must throw Physical 8+ or be telekinetically gripped, suffering 1d6 damage per round and unable to act. The victim may throw Physical 8+ every following round to break free.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>14</td>
+ 						<td>
+-							<strong>Conjure Elemental</strong> (range: 75m): summons an Elemental (sorcerer’s choice of element) to serve the sorcerer until the next dawn or dusk.
++							<strong>Conjure Elemental</strong> (<em>Forbidden</em>; range: 75m): summons an Elemental (sorcerer’s choice of element) to serve the sorcerer until the next dawn or dusk.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>15</td>
+ 						<td>
+-							<strong>Death!</strong> (range: 75m): immediately kill 1d6 human-sized creatures or 1 creature of any other kind. The targets may throw Physical 12+ to survive.
++							<strong>Death!</strong> (<em>Forbidden</em>; range: 75m): immediately kill 1d6 human-sized creatures or 1 creature of any other kind. The targets may throw Physical 12+ to survive.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>16</td>
+ 						<td>
+-							<strong>Deathless Minions</strong> (range 10m): raises up to 4 corpses per Lore skill level as skeletons or zombies to the next dawn or dusk.
++							<strong>Deathless Minions</strong> (<em>Greater</em>; range: 10m): raises up to 4 corpses per Lore skill level as skeletons or zombies to the next dawn or dusk.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>21</td>
+ 						<td>
+-							<strong>Disguise</strong> (range: touch): 2 creatures per Lore skill level appear as different creatures of a similar shape and size. It is possible to impersonate a specific creature if the sorcerer is familiar with the intended disguise it. The spell alters the target’s appearance, voice, and odor.
++							<strong>Disguise</strong> (<em>Lesser</em>; range: touch): For 1 hour, 2 creatures per Lore skill level appear as different creatures of a similar shape and size. It is possible to impersonate a specific creature if the sorcerer is familiar with the intended disguise. The spell alters the target’s appearance, voice, and odor.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>22</td>
+ 						<td>
+-							<strong>Dispel Magic</strong> (range: 40m): dispels all spells and similar effects affecting one creature or object. Cannot dispel magical artifacts.
++							<strong>Dispel Magic</strong> (<em>Greater</em>; range: 40m): dispels all spells and similar effects affecting one creature or object. Cannot dispel magical artifacts.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>23</td>
+ 						<td>
+-							<strong>Divine Audience</strong> (range: self): a god or great spirit truthfully answers 3 yes-or-no questions per Lore skill level. May be cast once a week.
++							<strong>Divine Audience</strong> (<em>Greater</em>; range: self): a god or great spirit truthfully answers 3 yes-or-no questions per Lore skill level. May be cast once a week.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>24</td>
+ 						<td>
+-							<strong>Enthrall</strong> (range: 10m): one humanoid creature must throw Lore 8+ or treat the sorcerer as a true friend; another Lore throw to break free is permitted every day.
++							<strong>Enthrall</strong> (<em>Greater</em>; range: 10m): one humanoid creature must throw Lore 8+ or treat the sorcerer as a true friend; another Lore throw to break free is permitted every day.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>25</td>
+ 						<td>
+-							<strong>Exorcism</strong> (range: 50m): instantly destroys 3 undead creatures or demons per Lore skill level. Undead or demons possessing the Lore skill are immune to this spell.
++							<strong>Exorcism</strong> (<em>Forbidden</em>; range: 50m): instantly destroys 3 undead creatures or demons per Lore skill level. Undead or demons possessing the Lore skill are immune to this spell.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>26</td>
+ 						<td>
+-							<strong>Eye of the Beholder</strong> (range: 1km): choose a location within a 1km range. If there is a creature within 100m of the chosen location, the sorcerer may see through that creature’ eyes for 1 hour. If there is no creature, the spell fails.
++							<strong>Eye of the Beholder</strong> (<em>Greater</em>; range: 1km): choose a location within a 1km range. If there is a creature within 100m of the chosen location, the sorcerer may see through that creature’s eyes for 1 hour. If there is no creature, the spell fails.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>31</td>
+ 						<td>
+-							<strong>Feeblemind</strong> (range: 60m): target must throw Lore 10+ or become a helpless idiot incapable of casting spells, understanding language, communicating coherently, or fighting effectively. Only cured by dispel magic or restoration spells.
++							<strong>Feeblemind</strong> (<em>Forbidden</em>; range: 60m): target must throw Lore 10+ or become a helpless idiot incapable of casting spells, understanding language, communicating coherently, or fighting effectively. Only cured by dispel magic or restoration spells.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>32</td>
+ 						<td>
+-							<strong>Heroism</strong> (range: touch): for the next hour, 2 creatures per Lore skill level may each reroll one failed attack throw. Each creature may use this benefit only once during the spell’s duration.
++							<strong>Heroism</strong> (<em>Lesser</em>; range: touch): for the next hour, 2 creatures per Lore skill level may each reroll one failed attack throw. Each creature may use this benefit only once during the spell’s duration.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>33</td>
+ 						<td>
+-							<strong>Horror</strong> (range: 120m): 5 creatures per Lore skill level flee in terror from the sorcerer for 1 hour.
++							<strong>Horror</strong> (<em>Forbidden</em>; range: 120m): 5 creatures per Lore skill level flee in terror from the sorcerer for 1 hour.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>34</td>
+ 						<td>
+-							<strong>Immunity to the Elements</strong> (range: touch): 2 creatures per Lore skill level are immune to mundane fire, cold, and electrical damage for 1 hour per Lore skill level and take half damage from magical versions of these elements (round up).
++							<strong>Immunity to the Elements</strong> (<em>Greater</em>; range: touch): 2 creatures per Lore skill level are immune to mundane fire, cold, and electrical damage for 1 hour per Lore skill level and take half damage from magical versions of these elements (round up).
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>35</td>
+ 						<td>
+-							<strong>Invisibility</strong> (range: touch): 2 creatures per Lore skill level become invisible for one day, or until they attack another creature.
++							<strong>Invisibility</strong> (<em>Greater</em>; range: touch): 2 creatures per Lore skill level become invisible for one day, or until they attack another creature.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>36</td>
+ 						<td>
+-							<strong>Might of the Anunaki</strong> (range: touch): One target per Lore skill level is transformed into a 3m-tall giant version of themselves for 3 hours, doubling their Stamina and carrying capacity and granting modifier +2 to attack and damage rolls.
++							<strong>Might of the Anunaki</strong> (<em>Forbidden</em>; range: touch): One target per Lore skill level is transformed into a 3m-tall giant version of themselves for 3 hours, doubling their Stamina and carrying capacity and granting modifier +2 to attack and damage rolls.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>41</td>
+ 						<td>
+-							<strong>Mind Probe</strong> (range: 20m): read one target’s surface and deep thoughts for 10 minutes.
++							<strong>Mind Probe</strong> (<em>Greater</em>; range: 20m): Read one target’s surface and deep thoughts for 10 minutes. An unwilling target negates the spell with Lore 10+.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>42</td>
+ 						<td>
+-							<strong>Paralysis</strong> (range: 120m): 2 creatures per Lore skill level are paralyzed for 1 hour.
++							<strong>Paralysis</strong> (<em>Forbidden</em>; range: 120m): 2 creatures per Lore skill level are paralyzed for 1 hour.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>43</td>
+ 						<td>
+-							<strong>Petrification</strong> (range: 120m): 1 creature per Lore skill level is permanently turned to stone. Alternatively, 1 petrified creature per Lore skill level turns back to fleshy life.
++							<strong>Petrification</strong> (<em>Forbidden</em>; range: 120m): 1 creature per Lore skill level is permanently turned to stone. Alternatively, 1 petrified creature per Lore skill level turns back to fleshy life.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>44</td>
+ 						<td>
+-							<strong>Rebirth!</strong> (range: touch): one dead creature (even without a surviving body) returns to life. Throw 1d6: 1, the spell fails, and the creature cannot be Reborn again; 2, the creature rises as a ghoul and attacks the caster; 3-5, the creature has risen but requires 1d6 weeks of rest to recover; 6, the creature rises with full Stamina and is ready for action!
++							<strong>Rebirth!</strong> (<em>Forbidden</em>; range: touch): one dead creature (even without a surviving body) returns to life. Throw 1d6: 1, the spell fails, and the creature cannot be Reborn again; 2, the creature rises as a ghoul and attacks the caster; 3-5, the creature has risen but requires 1d6 weeks of rest to recover; 6, the creature rises with full Stamina and is ready for action!
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>45</td>
+ 						<td>
+-							<strong>Regeneration</strong> (range: touch): regenerates lost or maimed body parts in one target.
++							<strong>Regeneration</strong> (<em>Greater</em>; range: touch): regenerates lost or maimed body parts in one target.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>46</td>
+ 						<td>
+-							<strong>Remove Curse</strong> (range: 10m): removes all curses from 1 creature or object per Lore skill level.
++							<strong>Remove Curse</strong> (<em>Greater</em>; range: 10m): removes all curses from 1 creature or object per Lore skill level.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>51</td>
+ 						<td>
+-							<strong>Respite</strong> (range: touch): target heals as if they have rested for 5d6 days, as per the healing times mentioned in the Triage table.
++							<strong>Respite</strong> (<em>Greater</em>; range: touch): target heals as if they have rested for 5d6 days, as per the healing times mentioned in the Triage table.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>52</td>
+ 						<td>
+-							<strong>Restoration</strong> (range: touch): removes any curses, afflictions, diseases, or poisons from the target.
++							<strong>Restoration</strong> (<em>Greater</em>; range: touch): removes any curses, afflictions, diseases, or poisons from the target.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>53</td>
+ 						<td>
+-							<strong>Sorcerer’s Armor</strong> (range: touch): 2 creatures per Lore skill level gain +3 to their protection. This is cumulative with worn armor until the next dawn or dusk (whichever is later).
++							<strong>Sorcerer’s Armor</strong> (<em>Greater</em>; range: touch): 2 creatures per Lore skill level gain +3 to their protection. This is cumulative with worn armor until the next dawn or dusk (whichever is later).
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>54</td>
+ 						<td>
+-							<strong>Speak with Animals and Plants</strong> (range: line of sight): allows conversing with an animal or plant as if it was a person for 1 hour.
++							<strong>Speak with Animals and Plants</strong> (<em>Lesser</em>; range: line of sight): allows conversing with an animal or plant as if it was a person for 1 hour.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>55</td>
+ 						<td>
+-							<strong>Spirit Talk</strong> (range: 30m): The sorcerer converses with the spirit of a dead body, who will truthfully answer 2 questions per Lore skill level to the best of the knowledge they had before they died.
++							<strong>Spirit Talk</strong> (<em>Lesser</em>; range: 30m): The sorcerer converses with the spirit of a dead body, who will truthfully answer 2 questions per Lore skill level to the best of the knowledge they had before they died.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>56</td>
+ 						<td>
+-							<strong>Summon Cacodemon</strong> (range: 75m): summons a Cacodemon to serve the caster until the next dawn or dusk (whichever is later).
++							<strong>Summon Cacodemon</strong> (<em>Forbidden</em>; range: 75m): summons a Cacodemon to serve the caster until the next dawn or dusk (whichever is later).
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>61</td>
+ 						<td>
+-							<strong>Summon Weather</strong> (range: 10km per Lore skill level): calls forth and creates a specific weather condition to the sorcerer’s location for 3 hours per Lore skill level.
++							<strong>Summon Weather</strong> (<em>Forbidden</em>; range: 10km per Lore skill level): calls forth and creates a specific weather condition to the sorcerer’s location for 3 hours per Lore skill level.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>62</td>
+ 						<td>
+-							<strong>Transmogrification</strong> (range: 120m): One creature is permanently transmogrified to a living form chosen by the sorcerer; a Physical 8+ throw by the target negates this effect. The target gains all characteristics of the chosen creature, including mental ones. A successful restoration or dispel magic spell reverses this effect.
++							<strong>Transmogrification</strong> (<em>Forbidden</em>; range: 120m): One creature is permanently transmogrified to a living form chosen by the sorcerer; a Physical 8+ throw by the target negates this effect. The target gains all characteristics of the chosen creature, including mental ones. A successful restoration or dispel magic spell reverses this effect.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>63</td>
+ 						<td>
+-							<strong>Tremor</strong> (range: 60m radius, excluding the sorcerer; or 90m long, 30m wide cone emanating from the sorcerer): causes the ground to tremble. Every round any creature in range, including any allies of the sorcerer, must throw Physical 8+: on failure, they suffer 1d6 damage and are knocked prone. This lasts while the sorcerer concentrates on this effect.
++							<strong>Tremor</strong> (<em>Forbidden</em>; range: 60m radius, excluding the sorcerer; or 90m long, 30m wide cone emanating from the sorcerer): causes the ground to tremble. Every round any creature in range, including any allies of the sorcerer, must throw Physical 8+: on failure, they suffer 1d6 damage and are knocked prone. This lasts while the sorcerer concentrates on this effect.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>64</td>
+ 						<td>
+-							<strong>True Seeing</strong> (range: touch): the subject sees things as they truly are and is immune to illusions for 10 minutes per Lore skill.
++							<strong>True Seeing</strong> (<em>Lesser</em>; range: touch): the subject sees things as they truly are and is immune to illusions for 10 minutes per Lore skill.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>65</td>
+ 						<td>
+-							<strong>Winged Flight</strong> (range: personal): The sorcerer sprouts wings for 1 hour per Lore skill level. The sorcerer may fly at a speed of 30m per round, or 18 km/h. The wings’ appearance is at the Referee’s discretion.
++							<strong>Winged Flight</strong> (<em>Greater</em>; range: personal): The sorcerer sprouts wings for 1 hour per Lore skill level. The sorcerer may fly at a speed of 30m per round, or 18 km/h. The wings’ appearance is at the Referee’s discretion.
+ 						</td>
+ 					</tr>
+ 					<tr>
+ 						<td>66</td>
+ 						<td>
+-							<strong>Wrath of the Storm</strong> (range: 120m): requires a lightning storm within range. Summons one lightning bolt per Lore level. Each bolt strikes a chosen target for 6d6 damage; Physical 8+ halves it. Unused bolts remain available for 1 hour per Lore level.
++							<strong>Wrath of the Storm</strong> (<em>Forbidden</em>; range: 120m): requires a lightning storm within range. Summons one lightning bolt per Lore level. Each bolt strikes a chosen target for 6d6 damage; Physical 8+ halves it. Unused bolts remain available for 1 hour per Lore level.
+ 						</td>
+ 					</tr>
+ 				</tbody>
+ 			</table>
+ 		</div>
+-		<h3 id="alternate-spell-list">Alternate List</h3>
+-		<p>Check with the Referee for permission to use this list.</p>
++		<h3 id="alternate-spell-list">Lesser and Greater Spells</h3>
++		<p>This optional list emphasizes bounded utility and adventuring magic. Check with the Referee for permission to choose or roll spells from it. Each spell’s tier appears after its name.</p>
+ 		<div class="table-scroll" role="region" aria-label="Alternate spell list: d66, Spell" tabindex="0">
+ 			<table class="table--roll">
+ 				<colgroup>
+@@ -2828,42 +2856,42 @@
+ 					</tr>
+ 				</thead>
+ 				<tbody>
+-					<tr><td>11</td><td><strong>Aegis Against Arrows</strong> (range: touch): For 1 hour, ranged weapon attacks against 2 creatures per Lore skill level suffer Disadvantage. Siege weapons and attacks made from within 3m are unaffected.</td></tr>
+-					<tr><td>12</td><td><strong>Arcane Lock</strong> (range: touch): Magically seal one door, lid, gate, or similar closure until the next dawn. The sorcerer may name a password and any creatures who can open it normally; anyone else must dispel the spell or succeed on Physical 14+ to force it open.</td></tr>
+-					<tr><td>13</td><td><strong>Binding Circle</strong> (range: 20m): Trace a circle up to 5m across and choose demons, elementals, spirits, or undead. For 1 hour, creatures of the chosen kind cannot cross the circle in either direction unless they succeed on Lore 12+ each time they try; damaging or deliberately moving the circle ends the spell.</td></tr>
+-					<tr><td>14</td><td><strong>Black Lantern</strong> (range: 60m): A point within range radiates impenetrable magical darkness in a 10m radius for 10 minutes per Lore skill level. Ordinary light and non-magical darkvision cannot pierce it, but True Seeing can.</td></tr>
+-					<tr><td>15</td><td><strong>Bloodhound Mark</strong> (range: touch): For 24 hours, the sorcerer knows the direction and approximate distance to one touched creature while it remains on the same plane. An unwilling target negates the spell with Lore 8+, and Dispel Magic removes the mark.</td></tr>
+-					<tr><td>16</td><td><strong>Breath of the Deep</strong> (range: touch): For 2 hours per Lore skill level, 2 creatures per Lore skill level can breathe water as easily as air and suffer no harm from ordinary deep-water pressure. This spell does not grant swimming ability or protection from cold.</td></tr>
+-					<tr><td>21</td><td><strong>Bridge of Air</strong> (range: 60m): Create an invisible, immobile walkway up to 30m long and 3m wide for 10 minutes. It may be level or gently sloped, supports any number of human-sized creatures, and vanishes immediately if dispelled.</td></tr>
+-					<tr><td>22</td><td><strong>Command the Dead</strong> (range: 30m): Up to 2 undead creatures per Lore skill level must throw Lore 8+ or obey the sorcerer’s spoken orders for 1 hour. An intelligent undead repeats the throw whenever ordered to harm itself or something it was sworn to protect.</td></tr>
+-					<tr><td>23</td><td><strong>Cone of Winter</strong> (range: 15m cone): Every creature in the cone suffers 4d6 cold damage, halved by a successful Physical 8+ throw. Water freezes, small mundane flames go out, and affected ground becomes difficult terrain until the ice melts.</td></tr>
+-					<tr><td>24</td><td><strong>Dream Message</strong> (range: unlimited): Send a message of no more than 25 words to a known sleeping creature on the same plane. The recipient recognizes the sorcerer, remembers the message upon waking, and may give an immediate reply of no more than 25 words.</td></tr>
+-					<tr><td>25</td><td><strong>Earthshape</strong> (range: 20m): Reshape up to a 3m cube of natural earth, clay, sand, or unworked stone into any stable form. The spell cannot shape worked masonry, precious stone, metal, or a material occupied by a living creature.</td></tr>
+-					<tr><td>26</td><td><strong>Echoes of Violence</strong> (range: touch): Touch a place or object and witness a silent, dreamlike impression of the most recent violent event involving it within the last year. The vision lasts no more than 10 minutes and reveals what occurred from the object’s location, but not hidden thoughts or events outside that viewpoint.</td></tr>
+-					<tr><td>31</td><td><strong>Far Step</strong> (range: 120m): The sorcerer and 1 willing creature per Lore skill level teleport to an unoccupied place within range that the sorcerer can see. Each traveler may carry only their normal equipment and Encumbrance.</td></tr>
+-					<tr><td>32</td><td><strong>Featherfall</strong> (range: 60m): For 10 minutes, up to 3 creatures per Lore skill level descend gently at 10m per round whenever they fall. A target can still jump and move normally, and the effect ends for it upon landing.</td></tr>
+-					<tr><td>33</td><td><strong>Geas</strong> (range: touch): Give a touched creature one clearly stated command that can be completed within a month; an unwilling target negates it with Lore 12+. Until the command is completed, a disobedient target suffers 2d6 damage that ignores Armor at each dawn, but a command that requires certain death or is impossible automatically fails.</td></tr>
+-					<tr><td>34</td><td><strong>Ghost Door</strong> (range: 10m): Open a passage up to 2m wide and 3m high through no more than 3m of non-magical wood, earth, or stone. The passage lasts for 10 minutes and expels occupants harmlessly to the nearer side when it closes.</td></tr>
+-					<tr><td>35</td><td><strong>Gravity Well</strong> (range: 60m): Choose a 10m-radius area. For 3 rounds, a creature that enters or begins its turn there must throw Physical 8+; on failure it is knocked prone and cannot leave the area that round, while on success all its movement within the area costs twice as much.</td></tr>
+-					<tr><td>36</td><td><strong>Hearth Ward</strong> (range: touch): Ward a campsite, room, or building no more than 20m across until the next dawn. The sorcerer wakes immediately if a creature enters without speaking a chosen password, and those resting within gain Advantage on throws to resist environmental cold and ordinary disease.</td></tr>
+-					<tr><td>41</td><td><strong>Iron Tongue</strong> (range: touch): For 1 hour, the target can speak, understand, read, and write any non-secret mortal language encountered. Codes, ciphers, magical writing, and meaning deliberately hidden through wordplay remain obscure.</td></tr>
+-					<tr><td>42</td><td><strong>Mark of Return</strong> (range: touch): Mark the ground beneath the sorcerer for 24 hours. Once before the spell ends, the sorcerer may use an action to teleport back to the mark with carried equipment and 1 willing creature per Lore skill level, provided all are on the same plane.</td></tr>
+-					<tr><td>43</td><td><strong>Mirror Host</strong> (range: personal): Three illusory doubles surround and mimic the sorcerer for 10 minutes. When an attack would hit the sorcerer, roll 1d6: a double is hit and destroyed on 1–3 while three remain, 1–2 while two remain, or 1 while one remains. Area effects ignore the doubles.</td></tr>
+-					<tr><td>44</td><td><strong>Mute Sorcery</strong> (range: 60m): One creature must throw Lore 8+ or lose the ability to cast spells for 1d6 rounds. This affects only spellcasting; it does not prevent the use of magical artifacts or other supernatural abilities.</td></tr>
+-					<tr><td>45</td><td><strong>Night Eyes</strong> (range: touch): For 8 hours, 2 creatures per Lore skill level see in dim light as if it were daylight and in darkness as if it were dim light. Magical darkness remains opaque.</td></tr>
+-					<tr><td>46</td><td><strong>Oathfire</strong> (range: touch): Two or more willing creatures swear a clearly worded bargain while touching. For one year, a creature that knowingly breaks the bargain is visibly branded and suffers modifier −2 to all throws until it makes restitution or receives Remove Curse; the spell fails if the parties do not share the same understanding of the bargain.</td></tr>
+-					<tr><td>51</td><td><strong>Phantom Steed</strong> (range: 10m): Conjure a spectral riding beast that serves one willing rider until the next dawn or dusk, whichever is later. It moves 30m per round and can cover 60km in a day, but cannot attack and vanishes after suffering any damage, dropping its rider safely in its space.</td></tr>
+-					<tr><td>52</td><td><strong>Pocket Sanctuary</strong> (range: touch): A door or similar entrance opens for 8 hours into a dry, temperate room large enough for the sorcerer and 2 companions per Lore skill level. Nothing can enter except through that entrance, but occupants are expelled harmlessly when the spell ends or is dispelled.</td></tr>
+-					<tr><td>53</td><td><strong>Razor Wind</strong> (range: 60m line): A 3m-wide line of cutting air deals 3d6 damage to every creature in its path, with Physical 8+ halving the damage. Razor Wind ignores 1 point of Armor and cuts ordinary ropes, cloth, foliage, and similarly fragile obstacles.</td></tr>
+-					<tr><td>54</td><td><strong>Seal the Wound</strong> (range: touch): One living creature regains 2d6 Stamina and immediately stops bleeding. This spell cannot raise Stamina above its normal maximum, restore a lost body part, cure poison or disease, or affect the same creature more than once per day.</td></tr>
+-					<tr><td>55</td><td><strong>Shadow Double</strong> (range: 120m): Create an illusory duplicate of the sorcerer that appears at any visible point in range and lasts for 10 minutes while the sorcerer concentrates. The sorcerer sees and hears from its position and may make it move and speak, but it cannot touch anything and vanishes when struck.</td></tr>
+-					<tr><td>56</td><td><strong>Silence</strong> (range: 60m): No sound can be created in or pass through a 10m-radius sphere for 10 minutes. Creatures inside are deafened and cannot communicate by voice; spellcasting is unaffected unless a particular effect explicitly requires speech or sound.</td></tr>
+-					<tr><td>61</td><td><strong>Sleep of Ages</strong> (range: 60m): Choose up to 3 creatures per Lore skill level; each must throw Lore 8+ or fall into enchanted sleep for 1 hour. A sleeping target wakes if injured or if another creature spends an action vigorously rousing it, and creatures that do not sleep are immune.</td></tr>
+-					<tr><td>62</td><td><strong>Stone Rampart</strong> (range: 40m): Raise a rough stone wall up to 20m long, 3m high, and 1m thick from natural ground. Each 3m section has Defense 6, Armor 4, and 20 Stamina; the wall is permanent but cannot appear in an occupied space or topple directly onto a creature.</td></tr>
+-					<tr><td>63</td><td><strong>Storm Shelter</strong> (range: 10m): For 8 hours, an immobile 10m-radius dome turns aside ordinary rain, wind, snow, airborne ash, and dangerous natural temperatures. The dome does not stop creatures, attacks, magical weather, floodwater, or a lack of breathable air.</td></tr>
+-					<tr><td>64</td><td><strong>Unseen Hand</strong> (range: 30m): For 10 minutes while concentrating, move one unattended object weighing no more than 100kg at up to 10m per round. Fine manipulation is possible with a Craft 8+ throw, but the hand cannot attack, activate a magical item, or wrest an object from a creature.</td></tr>
+-					<tr><td>65</td><td><strong>Water Walk</strong> (range: touch): For 1 hour, 2 creatures per Lore skill level and their carried equipment can stand and move across liquid as if it were firm ground. A target may choose to end the effect on itself at any time.</td></tr>
+-					<tr><td>66</td><td><strong>Web of Night</strong> (range: 60m): Fill a 10m-radius area with sticky shadow-webs for 10 minutes. A creature entering or starting its turn there must throw Physical 8+ or become restrained; a restrained creature or adjacent ally may use an action and a successful Physical 8+ throw to free it. Fire clears a 3m section but deals 1d6 damage to every creature in that section.</td></tr>
++					<tr><td>11</td><td><strong>Aegis Against Arrows</strong> (<em>Lesser</em>; range: touch): For 1 hour, ranged weapon attacks against 2 creatures per Lore skill level suffer Disadvantage. Siege weapons and attacks made from within 3m are unaffected.</td></tr>
++					<tr><td>12</td><td><strong>Arcane Lock</strong> (<em>Lesser</em>; range: touch): Magically seal one door, lid, gate, or similar closure until the next dawn. The sorcerer may name a password and any creatures who can open it normally; anyone else must dispel the spell or succeed on Physical 14+ to force it open.</td></tr>
++					<tr><td>13</td><td><strong>Binding Circle</strong> (<em>Lesser</em>; range: 20m): Trace a circle up to 5m across and choose demons, elementals, spirits, or undead. For 1 hour, creatures of the chosen kind cannot cross the circle in either direction unless they succeed on Lore 12+ each time they try; damaging or deliberately moving the circle ends the spell.</td></tr>
++					<tr><td>14</td><td><strong>Black Lantern</strong> (<em>Lesser</em>; range: 60m): A point within range radiates impenetrable magical darkness in a 10m radius for 10 minutes per Lore skill level. Ordinary light and non-magical darkvision cannot pierce it, but True Seeing can.</td></tr>
++					<tr><td>15</td><td><strong>Bloodhound Mark</strong> (<em>Lesser</em>; range: touch): For 24 hours, the sorcerer knows the direction and approximate distance to one touched creature while it remains on the same plane. An unwilling target negates the spell with Lore 8+, and Dispel Magic removes the mark.</td></tr>
++					<tr><td>16</td><td><strong>Breath of the Deep</strong> (<em>Lesser</em>; range: touch): For 2 hours per Lore skill level, 2 creatures per Lore skill level can breathe water as easily as air and suffer no harm from ordinary deep-water pressure. This spell does not grant swimming ability or protection from cold.</td></tr>
++					<tr><td>21</td><td><strong>Bridge of Air</strong> (<em>Lesser</em>; range: 60m): Create an invisible, immobile walkway up to 30m long and 3m wide for 10 minutes. It may be level or gently sloped, supports any number of human-sized creatures, and vanishes immediately if dispelled.</td></tr>
++					<tr><td>22</td><td><strong>Command the Dead</strong> (<em>Greater</em>; range: 30m): Up to 2 undead creatures per Lore skill level must throw Lore 8+ or obey the sorcerer’s spoken orders for 1 hour. An intelligent undead repeats the throw whenever ordered to harm itself or something it was sworn to protect.</td></tr>
++					<tr><td>23</td><td><strong>Cone of Winter</strong> (<em>Greater</em>; range: 15m cone): Every creature in the cone suffers 4d6 cold damage, halved by a successful Physical 8+ throw. Water freezes, small mundane flames go out, and affected ground becomes difficult terrain until the ice melts.</td></tr>
++					<tr><td>24</td><td><strong>Dream Message</strong> (<em>Lesser</em>; range: unlimited): Send a message of no more than 25 words to a known sleeping creature on the same plane. The recipient recognizes the sorcerer, remembers the message upon waking, and may give an immediate reply of no more than 25 words.</td></tr>
++					<tr><td>25</td><td><strong>Earthshape</strong> (<em>Lesser</em>; range: 20m): Reshape up to a 3m cube of natural earth, clay, sand, or unworked stone into any stable form. The spell cannot shape worked masonry, precious stone, metal, or a material occupied by a living creature.</td></tr>
++					<tr><td>26</td><td><strong>Echoes of Violence</strong> (<em>Lesser</em>; range: touch): Touch a place or object and witness a silent, dreamlike impression of the most recent violent event involving it within the last year. The vision lasts no more than 10 minutes and reveals what occurred from the object’s location, but not hidden thoughts or events outside that viewpoint.</td></tr>
++					<tr><td>31</td><td><strong>Far Step</strong> (<em>Greater</em>; range: 120m): The sorcerer and 1 willing creature per Lore skill level teleport to an unoccupied place within range that the sorcerer can see. Each traveler may carry only their normal equipment and Encumbrance.</td></tr>
++					<tr><td>32</td><td><strong>Featherfall</strong> (<em>Lesser</em>; range: 60m): For 10 minutes, up to 3 creatures per Lore skill level descend gently at 10m per round whenever they fall. A target can still jump and move normally, and the effect ends for it upon landing.</td></tr>
++					<tr><td>33</td><td><strong>Geas</strong> (<em>Greater</em>; range: touch): Give a touched creature one clearly stated command that can be completed within a month; an unwilling target negates it with Lore 12+. Until the command is completed, a disobedient target suffers 2d6 damage that ignores Armor at each dawn, but a command that requires certain death or is impossible automatically fails.</td></tr>
++					<tr><td>34</td><td><strong>Ghost Door</strong> (<em>Greater</em>; range: 10m): Open a passage up to 2m wide and 3m high through no more than 3m of non-magical wood, earth, or stone. The passage lasts for 10 minutes and expels occupants harmlessly to the nearer side when it closes.</td></tr>
++					<tr><td>35</td><td><strong>Gravity Well</strong> (<em>Greater</em>; range: 60m): Choose a 10m-radius area. For 3 rounds, a creature that enters or begins its turn there must throw Physical 8+; on failure it is knocked prone and cannot leave the area that round, while on success all its movement within the area costs twice as much.</td></tr>
++					<tr><td>36</td><td><strong>Hearth Ward</strong> (<em>Lesser</em>; range: touch): Ward a campsite, room, or building no more than 20m across until the next dawn. The sorcerer wakes immediately if a creature enters without speaking a chosen password, and those resting within gain Advantage on throws to resist environmental cold and ordinary disease.</td></tr>
++					<tr><td>41</td><td><strong>Iron Tongue</strong> (<em>Lesser</em>; range: touch): For 1 hour, the target can speak, understand, read, and write any non-secret mortal language encountered. Codes, ciphers, magical writing, and meaning deliberately hidden through wordplay remain obscure.</td></tr>
++					<tr><td>42</td><td><strong>Mark of Return</strong> (<em>Greater</em>; range: touch): Mark the ground beneath the sorcerer for 24 hours. Once before the spell ends, the sorcerer may use an action to teleport back to the mark with carried equipment and 1 willing creature per Lore skill level, provided all are on the same plane.</td></tr>
++					<tr><td>43</td><td><strong>Mirror Host</strong> (<em>Lesser</em>; range: personal): Three illusory doubles surround and mimic the sorcerer for 10 minutes. When an attack would hit the sorcerer, roll 1d6: a double is hit and destroyed on 1–3 while three remain, 1–2 while two remain, or 1 while one remains. Area effects ignore the doubles.</td></tr>
++					<tr><td>44</td><td><strong>Mute Sorcery</strong> (<em>Lesser</em>; range: 60m): One creature must throw Lore 8+ or lose the ability to cast spells for 1d6 rounds. This affects only spellcasting; it does not prevent the use of magical artifacts or other supernatural abilities.</td></tr>
++					<tr><td>45</td><td><strong>Night Eyes</strong> (<em>Lesser</em>; range: touch): For 8 hours, 2 creatures per Lore skill level see in dim light as if it were daylight and in darkness as if it were dim light. Magical darkness remains opaque.</td></tr>
++					<tr><td>46</td><td><strong>Oathfire</strong> (<em>Lesser</em>; range: touch): Two or more willing creatures swear a clearly worded bargain while touching. For one year, a creature that knowingly breaks the bargain is visibly branded and suffers modifier −2 to all throws until it makes restitution or receives Remove Curse; the spell fails if the parties do not share the same understanding of the bargain.</td></tr>
++					<tr><td>51</td><td><strong>Phantom Steed</strong> (<em>Lesser</em>; range: 10m): Conjure a spectral riding beast that serves one willing rider until the next dawn or dusk, whichever is later. It moves 30m per round and can cover 60km in a day, but cannot attack and vanishes after suffering any damage, dropping its rider safely in its space.</td></tr>
++					<tr><td>52</td><td><strong>Pocket Sanctuary</strong> (<em>Greater</em>; range: touch): A door or similar entrance opens for 8 hours into a dry, temperate room large enough for the sorcerer and 2 companions per Lore skill level. Nothing can enter except through that entrance, but occupants are expelled harmlessly when the spell ends or is dispelled.</td></tr>
++					<tr><td>53</td><td><strong>Razor Wind</strong> (<em>Greater</em>; range: 60m line): A 3m-wide line of cutting air deals 3d6 damage to every creature in its path, with Physical 8+ halving the damage. Razor Wind ignores 1 point of Armor and cuts ordinary ropes, cloth, foliage, and similarly fragile obstacles.</td></tr>
++					<tr><td>54</td><td><strong>Seal the Wound</strong> (<em>Lesser</em>; range: touch): One living creature regains 2d6 Stamina and immediately stops bleeding. This spell cannot raise Stamina above its normal maximum, restore a lost body part, cure poison or disease, or affect the same creature more than once per day.</td></tr>
++					<tr><td>55</td><td><strong>Shadow Double</strong> (<em>Lesser</em>; range: 120m): Create an illusory duplicate of the sorcerer that appears at any visible point in range and lasts for 10 minutes while the sorcerer concentrates. The sorcerer sees and hears from its position and may make it move and speak, but it cannot touch anything and vanishes when struck.</td></tr>
++					<tr><td>56</td><td><strong>Silence</strong> (<em>Lesser</em>; range: 60m): No sound can be created in or pass through a 10m-radius sphere for 10 minutes. Creatures inside are deafened and cannot communicate by voice; spellcasting is unaffected unless a particular effect explicitly requires speech or sound.</td></tr>
++					<tr><td>61</td><td><strong>Sleep of Ages</strong> (<em>Greater</em>; range: 60m): Choose up to 3 creatures per Lore skill level; each must throw Lore 8+ or fall into enchanted sleep for 1 hour. A sleeping target wakes if injured or if another creature spends an action vigorously rousing it, and creatures that do not sleep are immune.</td></tr>
++					<tr><td>62</td><td><strong>Stone Rampart</strong> (<em>Greater</em>; range: 40m): Raise a rough stone wall up to 20m long, 3m high, and 1m thick from natural ground. Each 3m section has Defense 6, Armor 4, and 20 Stamina; the wall is permanent but cannot appear in an occupied space or topple directly onto a creature.</td></tr>
++					<tr><td>63</td><td><strong>Storm Shelter</strong> (<em>Lesser</em>; range: 10m): For 8 hours, an immobile 10m-radius dome turns aside ordinary rain, wind, snow, airborne ash, and dangerous natural temperatures. The dome does not stop creatures, attacks, magical weather, floodwater, or a lack of breathable air.</td></tr>
++					<tr><td>64</td><td><strong>Unseen Hand</strong> (<em>Lesser</em>; range: 30m): For 10 minutes while concentrating, move one unattended object weighing no more than 100kg at up to 10m per round. Fine manipulation is possible with a Craft 8+ throw, but the hand cannot attack, activate a magical item, or wrest an object from a creature.</td></tr>
++					<tr><td>65</td><td><strong>Water Walk</strong> (<em>Lesser</em>; range: touch): For 1 hour, 2 creatures per Lore skill level and their carried equipment can stand and move across liquid as if it were firm ground. A target may choose to end the effect on itself at any time.</td></tr>
++					<tr><td>66</td><td><strong>Web of Night</strong> (<em>Greater</em>; range: 60m): Fill a 10m-radius area with sticky shadow-webs for 10 minutes. A creature entering or starting its turn there must throw Physical 8+ or become restrained; a restrained creature or adjacent ally may use an action and a successful Physical 8+ throw to free it. Fire clears a 3m section but deals 1d6 damage to every creature in that section.</td></tr>
+ 				</tbody>
+ 			</table>
+ 		</div>
+
