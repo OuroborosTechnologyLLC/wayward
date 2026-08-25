@@ -145,8 +145,9 @@
 								<li><a href="#treasure-encumbrance">Treasure Encumbrance</a></li>
 							</ul>
 						</li>
-						<li><a href="#apothecary-preparations">Apothecary Preparations</a>
+						<li><a href="#apothecary-poisons-and-alchemy">Apothecary, Poisons, and Alchemy</a>
 							<ul>
+								<li><a href="#apothecary-preparations">Apothecary Preparations</a></li>
 								<li><a href="#poisons">Poisons</a>
 									<ul>
 										<li><a href="#poison-pressure">Poison Pressure</a></li>
@@ -156,6 +157,11 @@
 										<li><a href="#treating-poison">Treatment</a></li>
 										<li><a href="#formulating-poisons">Formulation</a></li>
 										<li><a href="#creating-poison-families">Creating Additional Poison Families</a></li>
+									</ul>
+								</li>
+								<li><a href="#alchemical-potions">Alchemical Potions</a>
+									<ul>
+										<li><a href="#alternate-potion-list">Alternate List</a></li>
 									</ul>
 								</li>
 							</ul>
@@ -313,11 +319,6 @@
 					<ul>
 						<li><a href="#identifying-magical-artifacts">Identifying Magical Artifacts</a></li>
 						<li><a href="#generating-treasures">Generating Treasures</a></li>
-						<li><a href="#alchemical-potions">Alchemical Potions</a>
-							<ul>
-								<li><a href="#alternate-potion-list">Alternate List</a></li>
-							</ul>
-						</li>
 						<li><a href="#magical-artifacts">Magical Artifacts</a></li>
 					</ul>
 				</li>
@@ -342,9 +343,11 @@
 				<li><a href="#table-general-equipment">Table 3.4: General Equipment</a></li>
 				<li><a href="#table-apothecary-preparations">Table 3.5: Apothecary Preparations</a></li>
 				<li><a href="#table-poison-families">Table 3.6: Poison Families</a></li>
-				<li><a href="#table-services">Table 3.7: Services</a></li>
-				<li><a href="#table-hirelings">Table 3.8: Hirelings</a></li>
-				<li><a href="#table-transportation">Table 3.9: Transportation</a></li>
+				<li><a href="#table-alchemical-potions">Table 3.7: Alchemical Potions</a></li>
+				<li><a href="#table-alternate-potion-list">Table 3.8: Alternate Potion List</a></li>
+				<li><a href="#table-services">Table 3.9: Services</a></li>
+				<li><a href="#table-hirelings">Table 3.10: Hirelings</a></li>
+				<li><a href="#table-transportation">Table 3.11: Transportation</a></li>
 				<li><a href="#table-triage">Table 4.1: Triage Results</a></li>
 				<li><a href="#table-slashing-critical-hits">Table 4.2: Slashing Critical Hits</a></li>
 				<li><a href="#table-crushing-critical-hits">Table 4.3: Crushing Critical Hits</a></li>
@@ -361,9 +364,7 @@
 				<li><a href="#table-reactions">Table 7.1: Reactions</a></li>
 				<li><a href="#table-faction-skills">Table 8.1: Faction Skills</a></li>
 				<li><a href="#table-generating-treasures">Table 9.1: Generating Treasures</a></li>
-				<li><a href="#table-alchemical-potions">Table 9.2: Alchemical Potions</a></li>
-				<li><a href="#table-alternate-potion-list">Table 9.3: Alternate Potion List</a></li>
-				<li><a href="#table-magical-artifacts">Table 9.4: Magical Artifacts</a></li>
+				<li><a href="#table-magical-artifacts">Table 9.2: Magical Artifacts</a></li>
 			</ul>
 		</nav>
 		<h1 id="introduction">Introduction</h1>
@@ -1305,7 +1306,8 @@
 			<p class="referee-guidance__label">Referee Guidance</p>
 			<p>Five spaces represent sacks of mixed treasure, not a fixed weight. Compact treasure may fill 1 space per WP; bulky treasure may fill 10 or more. State unusual bulk when found. Lost, abandoned, or destroyed bundles grant no WP.</p>
 		</aside>
-		<h2 id="apothecary-preparations">Apothecary Preparations</h2>
+		<h2 id="apothecary-poisons-and-alchemy">Apothecary, Poisons, and Alchemy</h2>
+		<h3 id="apothecary-preparations">Apothecary Preparations</h3>
 		<p>Each preparation is one dose. Administering it takes one Combat Action unless stated otherwise. Multiple doses of the same preparation do not stack.</p>
 		<div class="table-scroll" id="table-apothecary-preparations" role="region" aria-label="Table 3.5: Apothecary Preparations" tabindex="0">
 			<p class="table-caption"><strong>Table 3.5: Apothecary Preparations</strong></p>
@@ -1520,10 +1522,126 @@
 			<li>Tier 5 should be reserved for unique supernatural toxins, major quest ingredients, or formulas capable of threatening exceptionally powerful creatures.</li>
 		</ul>
 		<p>More Routes, shorter Onset or Frequency, higher Pressure, unavoidable damage, or a worse Crisis raises Tier. Give each family one identity; do not combine several families’ strengths.</p>
+		<h3 id="alchemical-potions">Alchemical Potions</h3>
+		<p>Brewing a one-use potion requires a laboratory worth at least 3 WP, one week, 1 WP in reagents, and Lore 8+.</p>
+		<div class="table-scroll" id="table-alchemical-potions" role="region" aria-label="Table 3.7: Alchemical Potions" tabindex="0">
+			<p class="table-caption"><strong>Table 3.7: Alchemical Potions</strong></p>
+			<table class="table--roll table--roll-tier">
+				<colgroup>
+					<col class="col-roll">
+					<col class="col-tier">
+					<col class="col-text">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>2d6</th>
+						<th>Tier</th>
+						<th>Alchemical Potion</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>2</td>
+						<td>5</td>
+						<td>
+							<strong>Speed:</strong> move and act twice per round for 1d6x10 minutes, then permanently age one year.
+						</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>4</td>
+						<td>
+							<strong>Love:</strong> become charmed by the next sentient creature seen for 1d6x10 minutes. If it is a compatible species and preferred gender, remain enamored until dispel magic ends the effect.
+						</td>
+					</tr>
+					<tr>
+						<td>4-6</td>
+						<td>4</td>
+						<td>
+							<strong>Healing:</strong> heal as after 5d6 days’ rest under a healer’s care, using the Triage table.
+						</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>4</td>
+						<td>
+							<strong>Oil of Sharpness:</strong> an oiled blade gains +1 to hit and can harm creatures vulnerable only to magical weapons.
+						</td>
+					</tr>
+					<tr>
+						<td>8</td>
+						<td>5</td>
+						<td>
+							<strong>Invisibility:</strong> the drinker and their equipment become invisible for 1 hour. Entering combat ends the effect. Attacks against an invisible character suffer -2.
+						</td>
+					</tr>
+					<tr>
+						<td>9</td>
+						<td>5</td>
+						<td>
+							<strong>Heroism:</strong> within 24 hours, reroll one failed attack.
+						</td>
+					</tr>
+					<tr>
+						<td>10</td>
+						<td>5</td>
+						<td>
+							<strong>Polymorph:</strong> assume another form for 1d6 Turns. Retain intellect and Lore; gain the target creature’s physical characteristics.
+						</td>
+					</tr>
+					<tr>
+						<td>11</td>
+						<td>6</td>
+						<td>
+							<strong>Longevity:</strong> become 10 years younger, minimum age 18. After the first dose, each dose requires Physical 3+. Failure reverses all Longevity effects.
+						</td>
+					</tr>
+					<tr>
+						<td>12</td>
+						<td>5</td>
+						<td>
+							<strong>Gaseous Form:</strong> become translucent gas for 1d6 Turns and drop all equipment. You cannot attack; move 5m per round through cracks and under doors. Non-magical weapons cannot harm you.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<h4 id="alternate-potion-list">Alternate List</h4>
+		<p>Check with the Referee for permission to use this list.</p>
+		<div class="table-scroll" id="table-alternate-potion-list" role="region" aria-label="Table 3.8: Alternate Potion List" tabindex="0">
+			<p class="table-caption"><strong>Table 3.8: Alternate Potion List</strong></p>
+			<table class="table--roll table--roll-tier">
+				<colgroup>
+					<col class="col-roll">
+					<col class="col-tier">
+					<col class="col-text">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>2d6</th>
+						<th>Tier</th>
+						<th>Alchemical Potion</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><td>2</td><td>5</td><td><strong>Phoenix Cordial:</strong> For the next 8 hours, the imbiber is surrounded by a faint odor of smoke. The first time they would fall to 0 Stamina during that period, they instead remain at 1 Stamina and the effect ends; instant death still kills them.</td></tr>
+					<tr><td>3</td><td>4</td><td><strong>Beast-Tongue Broth:</strong> For 1 hour, the imbiber can converse with ordinary animals. Animals are not compelled to be friendly, intelligent, truthful, or knowledgeable beyond their experience.</td></tr>
+					<tr><td>4</td><td>3</td><td><strong>Cat’s-Eye Elixir:</strong> For 8 hours, the imbiber sees in dim light as if it were daylight and in darkness as if it were dim light. Bright daylight causes Disadvantage on sight-based throws during this time unless the imbiber shades their eyes.</td></tr>
+					<tr><td>5</td><td>3</td><td><strong>Gecko Tonic:</strong> For 1 hour, the imbiber can climb walls and ceilings at half normal movement without a throw, provided at least two hands and feet are bare. Slippery, crumbling, or magically smooth surfaces still require Physical 8+.</td></tr>
+					<tr><td>6</td><td>3</td><td><strong>Deep-Lung Cordial:</strong> For 2 hours, the imbiber can breathe water as easily as air and gains Advantage on Physical throws to resist inhaled poison, smoke, and suffocation. The potion grants no swimming ability or protection from pressure and cold.</td></tr>
+					<tr><td>7</td><td>4</td><td><strong>Giant’s Ichor:</strong> For 1 hour, the imbiber gains modifier +2 on Physical throws based on raw strength, modifier +2 to melee damage, and triple normal carrying capacity. When the effect ends, the imbiber becomes Fatigued until completing 8 hours of rest.</td></tr>
+					<tr><td>8</td><td>4</td><td><strong>Ironhide Decoction:</strong> The imbiber’s skin becomes gray and hard, granting Armor 2 for 1 hour; this does not stack with worn armor or Sorcerer’s Armor. During that hour the imbiber cannot swim and suffers Disadvantage on Stealth throws that depend on moving silently.</td></tr>
+					<tr><td>9</td><td>4</td><td><strong>Oracle’s Tear:</strong> After drinking, the imbiber may ask the Referee one question about the likely consequence of a specific action they intend to attempt within the next hour. The Referee gives a brief, truthful omen based on the most likely outcome; hidden choices and genuinely random events may make the omen incomplete.</td></tr>
+					<tr><td>10</td><td>4</td><td><strong>Thunderbelly Philter:</strong> Within 1 hour of drinking, the imbiber may use one action to exhale lightning in a 15m line. Every creature in the line suffers 4d6 damage, halved by Physical 8+; if the charge is not used before the hour ends, the imbiber suffers 1d6 damage that ignores Armor.</td></tr>
+					<tr><td>11</td><td>5</td><td><strong>Truthglass Draught:</strong> For 10 minutes, the imbiber understands any spoken language and knows when a creature they can hear knowingly speaks a direct falsehood. The potion does not reveal omissions, mistakes, evasions, written lies, or the truth itself.</td></tr>
+					<tr><td>12</td><td>5</td><td><strong>Wraith Oil:</strong> Applying this oil to a creature and its equipment takes 1 minute. For the next 10 minutes, the target may pass through non-magical wood, earth, or stone, but cannot end movement inside it; if the effect expires while the target is within solid matter, they are expelled by the shortest route and suffer 3d6 damage that ignores Armor.</td></tr>
+				</tbody>
+			</table>
+		</div>
 		<h2 id="services">Services</h2>
 		<p>Accommodation tiers cover one stay of reasonable duration—from a few nights to a few weeks, as the fiction demands. Extended residence of a month or more may require another Wealth Roll.</p>
-		<div class="table-scroll" id="table-services" role="region" aria-label="Table 3.7: Services" tabindex="0">
-			<p class="table-caption"><strong>Table 3.7: Services</strong></p>
+		<div class="table-scroll" id="table-services" role="region" aria-label="Table 3.9: Services" tabindex="0">
+			<p class="table-caption"><strong>Table 3.9: Services</strong></p>
 			<table class="table--services">
 				<colgroup>
 					<col class="col-label-wide">
@@ -1578,8 +1696,8 @@
 		</div>
 		<h2 id="hirelings">Hirelings</h2>
 		<p>Tier covers one month’s employment. Equipment, mounts, unusual supplies, or exceptional danger may cost more. Hirelings retain their own loyalties and refuse obvious suicide.</p>
-		<div class="table-scroll" id="table-hirelings" role="region" aria-label="Table 3.8: Hirelings" tabindex="0">
-			<p class="table-caption"><strong>Table 3.8: Hirelings</strong></p>
+		<div class="table-scroll" id="table-hirelings" role="region" aria-label="Table 3.10: Hirelings" tabindex="0">
+			<p class="table-caption"><strong>Table 3.10: Hirelings</strong></p>
 			<table class="table--hirelings">
 				<colgroup>
 					<col class="col-label-wide">
@@ -1769,8 +1887,8 @@
 		</div>
 		<h2 id="transportation">Transportation</h2>
 		<p>Transport services cover one voyage; animals and vehicles are purchased once. One Upkeep Wealth Roll covers up to one month. Distance, danger, cargo, or destination may alter Tier.</p>
-		<div class="table-scroll" id="table-transportation" role="region" aria-label="Table 3.9: Transportation" tabindex="0">
-			<p class="table-caption"><strong>Table 3.9: Transportation</strong></p>
+		<div class="table-scroll" id="table-transportation" role="region" aria-label="Table 3.11: Transportation" tabindex="0">
+			<p class="table-caption"><strong>Table 3.11: Transportation</strong></p>
 			<table class="table--transportation">
 				<colgroup>
 					<col class="col-label-wide">
@@ -3765,129 +3883,13 @@
 				</tbody>
 			</table>
 		</div>
-		<h2 id="alchemical-potions">Alchemical Potions</h2>
-		<p>Brewing a one-use potion requires a laboratory worth at least 3 WP, one week, 1 WP in reagents, and Lore 8+.</p>
-		<div class="table-scroll" id="table-alchemical-potions" role="region" aria-label="Table 9.2: Alchemical Potions" tabindex="0">
-			<p class="table-caption"><strong>Table 9.2: Alchemical Potions</strong></p>
-			<table class="table--roll table--roll-tier">
-				<colgroup>
-					<col class="col-roll">
-					<col class="col-tier">
-					<col class="col-text">
-				</colgroup>
-				<thead>
-					<tr>
-						<th>2d6</th>
-						<th>Tier</th>
-						<th>Alchemical Potion</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>2</td>
-						<td>5</td>
-						<td>
-							<strong>Speed:</strong> move and act twice per round for 1d6x10 minutes, then permanently age one year.
-						</td>
-					</tr>
-					<tr>
-						<td>3</td>
-						<td>4</td>
-						<td>
-							<strong>Love:</strong> become charmed by the next sentient creature seen for 1d6x10 minutes. If it is a compatible species and preferred gender, remain enamored until dispel magic ends the effect.
-						</td>
-					</tr>
-					<tr>
-						<td>4-6</td>
-						<td>4</td>
-						<td>
-							<strong>Healing:</strong> heal as after 5d6 days’ rest under a healer’s care, using the Triage table.
-						</td>
-					</tr>
-					<tr>
-						<td>7</td>
-						<td>4</td>
-						<td>
-							<strong>Oil of Sharpness:</strong> an oiled blade gains +1 to hit and can harm creatures vulnerable only to magical weapons.
-						</td>
-					</tr>
-					<tr>
-						<td>8</td>
-						<td>5</td>
-						<td>
-							<strong>Invisibility:</strong> the drinker and their equipment become invisible for 1 hour. Entering combat ends the effect. Attacks against an invisible character suffer -2.
-						</td>
-					</tr>
-					<tr>
-						<td>9</td>
-						<td>5</td>
-						<td>
-							<strong>Heroism:</strong> within 24 hours, reroll one failed attack.
-						</td>
-					</tr>
-					<tr>
-						<td>10</td>
-						<td>5</td>
-						<td>
-							<strong>Polymorph:</strong> assume another form for 1d6 Turns. Retain intellect and Lore; gain the target creature’s physical characteristics.
-						</td>
-					</tr>
-					<tr>
-						<td>11</td>
-						<td>6</td>
-						<td>
-							<strong>Longevity:</strong> become 10 years younger, minimum age 18. After the first dose, each dose requires Physical 3+. Failure reverses all Longevity effects.
-						</td>
-					</tr>
-					<tr>
-						<td>12</td>
-						<td>5</td>
-						<td>
-							<strong>Gaseous Form:</strong> become translucent gas for 1d6 Turns and drop all equipment. You cannot attack; move 5m per round through cracks and under doors. Non-magical weapons cannot harm you.
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<h3 id="alternate-potion-list">Alternate List</h3>
-		<p>Check with the Referee for permission to use this list.</p>
-		<div class="table-scroll" id="table-alternate-potion-list" role="region" aria-label="Table 9.3: Alternate Potion List" tabindex="0">
-			<p class="table-caption"><strong>Table 9.3: Alternate Potion List</strong></p>
-			<table class="table--roll table--roll-tier">
-				<colgroup>
-					<col class="col-roll">
-					<col class="col-tier">
-					<col class="col-text">
-				</colgroup>
-				<thead>
-					<tr>
-						<th>2d6</th>
-						<th>Tier</th>
-						<th>Alchemical Potion</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr><td>2</td><td>5</td><td><strong>Phoenix Cordial:</strong> For the next 8 hours, the imbiber is surrounded by a faint odor of smoke. The first time they would fall to 0 Stamina during that period, they instead remain at 1 Stamina and the effect ends; instant death still kills them.</td></tr>
-					<tr><td>3</td><td>4</td><td><strong>Beast-Tongue Broth:</strong> For 1 hour, the imbiber can converse with ordinary animals. Animals are not compelled to be friendly, intelligent, truthful, or knowledgeable beyond their experience.</td></tr>
-					<tr><td>4</td><td>3</td><td><strong>Cat’s-Eye Elixir:</strong> For 8 hours, the imbiber sees in dim light as if it were daylight and in darkness as if it were dim light. Bright daylight causes Disadvantage on sight-based throws during this time unless the imbiber shades their eyes.</td></tr>
-					<tr><td>5</td><td>3</td><td><strong>Gecko Tonic:</strong> For 1 hour, the imbiber can climb walls and ceilings at half normal movement without a throw, provided at least two hands and feet are bare. Slippery, crumbling, or magically smooth surfaces still require Physical 8+.</td></tr>
-					<tr><td>6</td><td>3</td><td><strong>Deep-Lung Cordial:</strong> For 2 hours, the imbiber can breathe water as easily as air and gains Advantage on Physical throws to resist inhaled poison, smoke, and suffocation. The potion grants no swimming ability or protection from pressure and cold.</td></tr>
-					<tr><td>7</td><td>4</td><td><strong>Giant’s Ichor:</strong> For 1 hour, the imbiber gains modifier +2 on Physical throws based on raw strength, modifier +2 to melee damage, and triple normal carrying capacity. When the effect ends, the imbiber becomes Fatigued until completing 8 hours of rest.</td></tr>
-					<tr><td>8</td><td>4</td><td><strong>Ironhide Decoction:</strong> The imbiber’s skin becomes gray and hard, granting Armor 2 for 1 hour; this does not stack with worn armor or Sorcerer’s Armor. During that hour the imbiber cannot swim and suffers Disadvantage on Stealth throws that depend on moving silently.</td></tr>
-					<tr><td>9</td><td>4</td><td><strong>Oracle’s Tear:</strong> After drinking, the imbiber may ask the Referee one question about the likely consequence of a specific action they intend to attempt within the next hour. The Referee gives a brief, truthful omen based on the most likely outcome; hidden choices and genuinely random events may make the omen incomplete.</td></tr>
-					<tr><td>10</td><td>4</td><td><strong>Thunderbelly Philter:</strong> Within 1 hour of drinking, the imbiber may use one action to exhale lightning in a 15m line. Every creature in the line suffers 4d6 damage, halved by Physical 8+; if the charge is not used before the hour ends, the imbiber suffers 1d6 damage that ignores Armor.</td></tr>
-					<tr><td>11</td><td>5</td><td><strong>Truthglass Draught:</strong> For 10 minutes, the imbiber understands any spoken language and knows when a creature they can hear knowingly speaks a direct falsehood. The potion does not reveal omissions, mistakes, evasions, written lies, or the truth itself.</td></tr>
-					<tr><td>12</td><td>5</td><td><strong>Wraith Oil:</strong> Applying this oil to a creature and its equipment takes 1 minute. For the next 10 minutes, the target may pass through non-magical wood, earth, or stone, but cannot end movement inside it; if the effect expires while the target is within solid matter, they are expelled by the shortest route and suffer 3d6 damage that ignores Armor.</td></tr>
-				</tbody>
-			</table>
-		</div>
 		<h2 id="magical-artifacts">Magical Artifacts</h2>
 		<p>Each permanent artifact embodies a spell.</p>
 		<p>Creation requires a workshop worth 9 WP, Lore 8+, knowledge of the listed spell, and materials costing 9 WP at Tier 6, 27 WP at Tier 7, or 81 WP at Tier 8. The Referee may require rare ingredients.</p>
 		<p><em>Example: A Tier 6 Totem of Rahab requires Call Leviathan and 9 WP in materials. A powerful monster’s trophy may be a rare ingredient.</em></p>
 		<p>Artifacts are rarely sold. Characters must usually find, steal, or forge them. Place them carefully; they appear randomly only in royal or draconic Hoards. Forging one may be a campaign goal.</p>
-		<div class="table-scroll" id="table-magical-artifacts" role="region" aria-label="Table 9.4: Magical Artifacts" tabindex="0">
-			<p class="table-caption"><strong>Table 9.4: Magical Artifacts</strong></p>
+		<div class="table-scroll" id="table-magical-artifacts" role="region" aria-label="Table 9.2: Magical Artifacts" tabindex="0">
+			<p class="table-caption"><strong>Table 9.2: Magical Artifacts</strong></p>
 			<table class="table--roll table--roll-tier">
 				<colgroup>
 					<col class="col-roll">
