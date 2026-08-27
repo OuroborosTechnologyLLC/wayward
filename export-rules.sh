@@ -71,6 +71,7 @@ for requested_input in "${inputs[@]}"; do
         --variable=geometry:margin=1in \
         --metadata=lang:en \
         --resource-path="$input_dir:$script_dir" \
+        --lua-filter="$script_dir/remove-authored-contents.lua" \
         --lua-filter="$script_dir/latex-table-widths.lua" \
         --output="$tex_path"
 
@@ -95,6 +96,7 @@ for requested_input in "${inputs[@]}"; do
         --split-level=1 \
         --metadata=lang:en \
         --resource-path="$input_dir:$script_dir" \
+        --lua-filter="$script_dir/remove-authored-contents.lua" \
         --css="$script_dir/epub.css" \
         --output="$epub_path"
 

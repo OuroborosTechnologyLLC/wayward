@@ -112,6 +112,18 @@ blockquote {
 	content: counter(toc-chapter) "." counter(toc-section) "." counter(toc-subsection) "." counter(toc-subsubsection) " ";
 }
 
+#contents > ul > li:not(:first-child) > ul > li > ul > li > ul > li > ul {
+	counter-reset: toc-paragraph-section;
+}
+
+#contents > ul > li:not(:first-child) > ul > li > ul > li > ul > li > ul > li {
+	counter-increment: toc-paragraph-section;
+}
+
+#contents > ul > li:not(:first-child) > ul > li > ul > li > ul > li > ul > li > a::before {
+	content: counter(toc-chapter) "." counter(toc-section) "." counter(toc-subsection) "." counter(toc-subsubsection) "." counter(toc-paragraph-section) " ";
+}
+
 @media (min-width: 40em) {
 	#contents > ul,
 	#table-index > ul,

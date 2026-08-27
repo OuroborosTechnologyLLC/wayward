@@ -17,25 +17,3 @@ function Table(table)
 
     return table
 end
-
--- The HTML editions contain a hand-written linked contents list. Pandoc also
--- creates a proper PDF table of contents (with page numbers), so omit the HTML
--- copy from LaTeX to avoid printing two contents sections.
-function Pandoc(document)
-    local blocks = {}
-    local skip_contents_list = false
-
-    for _, block in ipairs(document.blocks) do
-        if block.t == "Header" and block.identifier == "contents" then
-            skip_contents_list = true
-        elseif skip_contents_list and
-            (block.t == "BulletList" or block.t == "OrderedList") then
-            skip_contents_list = false
-        else
-            table.insert(blocks, block)
-        end
-    end
-
-    document.blocks = blocks
-    return document
-end
