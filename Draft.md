@@ -17,3 +17,7 @@ These are the people who survive where armies perish. Barbarians and mercenaries
 *Wayward!* is a sword-and-sorcery roleplaying game about such heroes—or, more often, antiheroes. Test steel, nerve, and forbidden lore against cruel warlords, hungry beasts, decadent empires, and ancient things that should have stayed buried. Win glory if you can. Take the gold either way.
 
 So gather your dice, sharpen your blade, and keep one eye on your companions. The road is calling. Go... **Wayward!**
+
+# Renamed Archetype
+
+Intriguer > Scoundrel
