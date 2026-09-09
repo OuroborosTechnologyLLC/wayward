@@ -1,10 +1,10 @@
-# Optional Rule: Narrative Expertise
+# NEW: Optional Rule: Narrative Expertise
 
 Reserve this rule for playtesting. Use it only if Narrative Archetypes prove consistently less attractive or less consequential than Feature Archetypes.
 
 **Expertise:** Once per session, a character with one or more Narrative Archetypes may reroll one failed noncombat Skill throw directly covered by one of those Archetypes and use the better result. Expertise cannot reroll an attack, damage, resistance throw, Triage roll, or Mishap. A character receives one use per session regardless of how many Narrative Archetypes they possess.
 
-# Draft Introduction
+# UPDATE: Introduction
 
 The world ebbs and flows between order and chaos. Civilizations rise, drive roads through the wilderness, and raise walls against everything they fear. Then the gold runs thin, the rulers grow fat, and the walls begin to crack. Dark ages and golden ages matter little to those waiting for the right moment to strike.
 
@@ -18,7 +18,7 @@ These are the people who survive where armies perish. Barbarians and mercenaries
 
 So gather your dice, sharpen your blade, and keep one eye on your companions. The road is calling. Go... **Wayward!**
 
-# Contacts and Patrons
+# UPDATE: Contacts and Patrons
 
 Tighten language and clarify the meaning of terms like sphere, reach, favors, etc. The Network Advances are also unclear. When does a character choose them? Are they like Combat Moves?
 
