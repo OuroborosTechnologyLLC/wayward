@@ -18,6 +18,8 @@ These are the people who survive where armies perish. Barbarians and mercenaries
 
 So gather your dice, sharpen your blade, and keep one eye on your companions. The road is calling. Go... **Wayward!**
 
-# Renamed Archetype
+# Contacts and Patrons
 
-Intriguer > Scoundrel
+Tighten language and clarify the meaning of terms like sphere, reach, favors, etc. The Network Advances are also unclear. When does a character choose them? Are they like Combat Moves?
+
+Clarify procedure as well. Seems simple enough, just ask the referee, the. together solidify the details. But it still has ambiguity.
