@@ -23,3 +23,16 @@ So gather your dice, sharpen your blade, and keep one eye on your companions. Th
 Tighten language and clarify the meaning of terms like sphere, reach, favors, etc. The Network Advances are also unclear. When does a character choose them? Are they like Combat Moves?
 
 Clarify procedure as well. Seems simple enough, just ask the referee, the. together solidify the details. But it still has ambiguity.
+
+Clarify details of the contact itself and the status (strained or not).
+
+Rearrange the order of description:
+
+1. Name
+2. Role within organization if applicable or Title if independent
+3. Reach
+4. Interest
+5. Service(s)
+6. Favor
+7. Debt
+8. Strained
