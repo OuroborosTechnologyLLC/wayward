@@ -1,0 +1,241 @@
+% Wayward! Playtest Character Record
+% Two-page, letter-size, black-and-white character sheet.
+% Compile twice with pdfLaTeX:
+%   pdflatex Wayward-Character-Sheet-Playtest.tex
+%   pdflatex Wayward-Character-Sheet-Playtest.tex
+% The second pass resolves TikZ current-page positioning.
+\documentclass[10pt]{article}
+\usepackage[letterpaper,margin=0in]{geometry}
+\usepackage{ebgaramond}
+\usepackage{tikz}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\newcommand{\smallcapsfont}{\fontsize{8.2}{9}\selectfont}
+\newcommand{\tinyfont}{\fontsize{6.8}{7.5}\selectfont}
+\newcommand{\microfont}{\fontsize{5.8}{6.2}\selectfont}
+\newcommand{\sheettitle}[2]{%
+  \node[anchor=center] at (4.25,10.64) {\fontsize{31}{31}\selectfont WAYWARD!};
+  \draw[line width=.55pt] (.42,10.42)--(8.08,10.42);
+  \fill (.47,10.42) -- (.53,10.48) -- (.59,10.42) -- (.53,10.36) -- cycle;
+  \fill (7.91,10.42) -- (7.97,10.48) -- (8.03,10.42) -- (7.97,10.36) -- cycle;
+  \node[anchor=center] at (4.25,10.27) {\itshape\fontsize{8.4}{9}\selectfont #1};
+  \draw[line width=.35pt] (.42,10.15)--(8.08,10.15);
+}
+\newcommand{\sect}[3]{%
+  \node[anchor=west] at (#1,#2) {\fontsize{10.1}{10.5}\selectfont #3};
+  \draw[line width=.55pt] (#1,#2-.11)--(#1+3.45,#2-.11);
+}
+\newcommand{\longsect}[3]{%
+  \node[anchor=west] at (#1,#2) {\fontsize{10.1}{10.5}\selectfont #3};
+  \draw[line width=.55pt] (#1,#2-.11)--(8.08,#2-.11);
+}
+\newcommand{\fieldlabel}[3]{\node[anchor=west] at (#1,#2) {\smallcapsfont #3};}
+\newcommand{\writeline}[4]{\draw[line width=.35pt] (#1,#2)--(#3,#2);\node[anchor=west] at (#1,#2+.11) {\smallcapsfont #4};}
+\newcommand{\checkbox}[2]{\draw[line width=.45pt] (#1,#2) rectangle ++(.095,.095);}
+\newcommand{\statbox}[2]{\draw[line width=.65pt] (#1,#2) rectangle ++(.39,.36);}
+\newcommand{\footer}[1]{%
+  \draw[line width=.3pt] (.42,.34)--(8.08,.34);
+  \node[anchor=west] at (.42,.20) {\itshape\microfont Wayward! - Playtest Character Record};
+  \node[anchor=east] at (8.08,.20) {\itshape\microfont Page #1 of 2};
+}
+\begin{document}
+\begin{tikzpicture}[remember picture,overlay,x=1in,y=1in,shift={(current page.south west)}]
+\sheettitle{Furor Tenebrosi Labyrinthi - Character Record}{}
+
+% Identity
+\writeline{.45}{9.42}{3.05}{CHARACTER NAME}
+\writeline{3.15}{9.42}{5.75}{RACE / CULTURE}
+\writeline{5.85}{9.42}{8.08}{PLAYER}
+\writeline{.45}{8.96}{8.08}{ARCHETYPE(S)}
+
+% Skills - open circular array
+\node[anchor=west] at (.45,8.67) {\fontsize{10.1}{10.5}\selectfont SKILLS};
+\draw[line width=.55pt] (.42,8.53)--(4.02,8.53);
+% Six skill scores arranged around an implied ellipse. Squares sit above centered labels.
+\foreach \x/\y/\lab in {
+  2.22/8.30/COMBAT,
+  3.38/8.14/CRAFT,
+  3.38/7.35/LORE,
+  2.22/7.18/PHYSICAL,
+  1.06/7.35/SOCIAL,
+  1.06/8.14/STEALTH}{
+    \draw[line width=.65pt] (\x-.195,\y-.18) rectangle ++(.39,.36);
+    \node[anchor=north,align=center] at (\x,\y-.24) {\tinyfont \lab};
+}
+
+% Survival and defense
+\node[anchor=west] at (4.16,8.67) {\fontsize{10.1}{10.5}\selectfont SURVIVAL \& DEFENSE};
+\draw[line width=.55pt] (4.13,8.53)--(8.08,8.53);
+\fieldlabel{4.24}{8.27}{DEFENSE}
+\draw[line width=.55pt] (5.03,8.08)--(5.44,8.08);
+\node[anchor=west] at (4.24,7.95) {\itshape\microfont 8 + half Combat};
+\draw[line width=.35pt] (5.55,8.36)--(5.55,7.91);
+\fieldlabel{5.64}{8.27}{ARMOR}
+\draw[line width=.55pt] (6.44,8.08)--(6.85,8.08);
+\node[anchor=west] at (5.64,7.95) {\itshape\microfont current protection};
+\draw[line width=.35pt] (6.97,8.36)--(6.97,7.91);
+\fieldlabel{7.06}{8.27}{RESOLVE}
+\draw[line width=.55pt] (7.79,8.08)--(8.08,8.08);
+\node[anchor=west] at (7.06,7.95) {\itshape\microfont current score};
+
+% Stamina: pushed up into freed armor-worn space
+\node[anchor=west] at (4.24,7.72) {\fontsize{10}{10.5}\selectfont STAMINA};
+\node[anchor=west] at (4.93,7.72) {\itshape\microfont 14 + 3 x Physical};
+\fieldlabel{6.18}{7.72}{MAX}\statbox{6.54}{7.53}
+\fieldlabel{7.05}{7.72}{CURRENT}\statbox{7.69}{7.53}
+% 30 Stamina diamonds, grouped in six sets of five. Black out diamonds above
+% maximum Stamina; mark open diamonds as damage is taken.
+\foreach \base/\y in {4.30/7.29,5.48/7.29,6.66/7.29,4.30/7.04,5.48/7.04,6.66/7.04}{
+  \foreach \i in {0,...,4}{
+    \pgfmathsetmacro{\dx}{\base + 0.205*\i}
+    \draw[line width=.5pt]
+      (\dx,\y+.060)--(\dx+.060,\y)--(\dx,\y-.060)--(\dx-.060,\y)--cycle;
+  }
+}
+
+% Weapons and moves
+\node[anchor=west] at (.45,6.65) {\fontsize{10}{10.5}\selectfont WEAPONS \& ATTACKS};
+\draw[line width=.55pt] (.42,6.53)--(5.55,6.53);
+\node[anchor=west] at (5.68,6.65) {\fontsize{10}{10.5}\selectfont COMBAT MOVES \& FEATURES};
+\draw[line width=.55pt] (5.65,6.53)--(8.08,6.53);
+
+\node[anchor=west] at (.50,6.36) {\tinyfont WEAPON};
+\node[anchor=west] at (2.60,6.36) {\tinyfont DAMAGE};
+\node[anchor=west] at (3.42,6.36) {\tinyfont RANGE};
+\node[anchor=west] at (4.18,6.36) {\tinyfont NOTES};
+\draw[line width=.35pt] (2.53,6.50)--(2.53,4.83);
+\draw[line width=.35pt] (3.35,6.50)--(3.35,4.83);
+\draw[line width=.35pt] (4.10,6.50)--(4.10,4.83);
+\foreach \y in {6.18,5.91,5.64,5.37,5.10}{\draw[line width=.3pt] (.42,\y)--(5.55,\y);}
+\foreach \y in {6.18,5.91,5.64,5.37,5.10}{\draw[line width=.3pt] (5.65,\y)--(8.08,\y);}
+\draw[line width=.4pt] (.42,4.83)--(5.55,4.83);
+\draw[line width=.4pt] (5.65,4.83)--(8.08,4.83);
+
+% XP, wealth, wounds
+\writeline{.45}{4.32}{1.86}{CURRENT XP}
+\writeline{1.98}{4.32}{3.45}{TOTAL EARNED XP}
+\writeline{3.56}{4.32}{5.05}{WEALTH POINTS (WP)}
+\writeline{5.16}{4.32}{6.67}{WEALTH TIER}
+\writeline{6.79}{4.32}{8.08}{WOUNDS}
+
+% Inventory
+\node[anchor=west] at (.45,4.03) {\fontsize{10.1}{10.5}\selectfont INVENTORY};
+\node[anchor=east] at (8.08,4.03) {\tinyfont ENCUMBRANCE: CURRENT ENC. \rule{.28in}{.3pt}\quad TOTAL ENC. \rule{.28in}{.3pt}};
+\draw[line width=.55pt] (.42,3.91)--(8.08,3.91);
+
+% Two-column inventory tables
+\node[anchor=west] at (.49,3.75) {\tinyfont QTY};
+\node[anchor=west] at (.90,3.75) {\tinyfont ITEM};
+\node[anchor=west] at (2.52,3.75) {\tinyfont ENC};
+\node[anchor=west] at (2.98,3.75) {\tinyfont NOTES};
+\node[anchor=west] at (4.43,3.75) {\tinyfont QTY};
+\node[anchor=west] at (4.85,3.75) {\tinyfont ITEM};
+\node[anchor=west] at (6.47,3.75) {\tinyfont ENC};
+\node[anchor=west] at (6.92,3.75) {\tinyfont NOTES};
+\draw[line width=.3pt] (.85,3.88)--(.85,.59);
+\draw[line width=.3pt] (2.47,3.88)--(2.47,.59);
+\draw[line width=.3pt] (2.91,3.88)--(2.91,.59);
+\draw[line width=.55pt] (4.30,3.88)--(4.30,.59);
+\draw[line width=.3pt] (4.80,3.88)--(4.80,.59);
+\draw[line width=.3pt] (6.42,3.88)--(6.42,.59);
+\draw[line width=.3pt] (6.87,3.88)--(6.87,.59);
+\foreach \y in {3.60,3.38,3.16,2.94,2.72,2.50,2.28,2.06,1.84,1.62,1.40,1.18,.96,.74}{\draw[line width=.25pt] (.42,\y)--(8.08,\y);}
+\draw[line width=.4pt] (.42,.59)--(8.08,.59);
+
+\footer{1}
+\end{tikzpicture}
+\newpage
+
+\begin{tikzpicture}[remember picture,overlay,x=1in,y=1in,shift={(current page.south west)}]
+\sheettitle{Character Details, Spells, and Prayers}{}
+
+% Languages
+\longsect{.45}{9.82}{LANGUAGES}
+\draw[line width=.3pt] (4.30,9.69)--(4.30,9.06);
+\foreach \y in {9.48,9.27,9.06}{\draw[line width=.25pt] (.42,\y)--(8.08,\y);}
+
+% Connections -- updated to match the current Patrons and Contacts rules
+\node[anchor=west] at (.45,8.77) {\fontsize{10.1}{10.5}\selectfont CONNECTIONS};
+\node[anchor=east] at (8.08,8.77) {\tinyfont SLOTS USED: \rule{.23in}{.3pt} / \rule{.23in}{.3pt}\quad 3 + SOCIAL; CONTACT 1, PATRON 2};
+\draw[line width=.55pt] (.42,8.65)--(8.08,8.65);
+\draw[line width=.45pt] (4.30,8.61)--(4.30,5.56);
+\draw[line width=.3pt] (.42,7.10)--(8.08,7.10);
+
+% Connection 1 -- top left
+\node[anchor=west] at (.45,8.47) {\smallcapsfont CONNECTION 1};
+\checkbox{3.02}{8.43}\node[anchor=west] at (3.14,8.47) {\microfont CONTACT};
+\checkbox{3.67}{8.43}\node[anchor=west] at (3.79,8.47) {\microfont PATRON};
+\fieldlabel{.45}{8.26}{NAME}\draw[line width=.3pt] (1.22,8.22)--(4.20,8.22);
+\fieldlabel{.45}{8.08}{ROLE / TITLE}\draw[line width=.3pt] (1.22,8.04)--(4.20,8.04);
+\fieldlabel{.45}{7.90}{WHERE}\draw[line width=.3pt] (1.22,7.86)--(4.20,7.86);
+\fieldlabel{.45}{7.72}{WANTS}\draw[line width=.3pt] (1.22,7.68)--(4.20,7.68);
+\fieldlabel{.45}{7.54}{ABILITIES}\draw[line width=.3pt] (1.22,7.50)--(4.20,7.50);
+\draw[line width=.25pt] (.45,7.37)--(4.20,7.37);
+\fieldlabel{.45}{7.20}{FAVOR}\checkbox{.92}{7.14}\checkbox{1.14}{7.14}\checkbox{1.36}{7.14}
+\fieldlabel{1.66}{7.20}{DEBT}\checkbox{2.03}{7.14}\fieldlabel{2.30}{7.20}{STRAINED}\checkbox{3.08}{7.14};
+
+% Connection 2 -- top right
+\node[anchor=west] at (4.39,8.47) {\smallcapsfont CONNECTION 2};
+\checkbox{7.05}{8.43}\node[anchor=west] at (7.17,8.47) {\microfont CONTACT};
+\checkbox{7.70}{8.43}\node[anchor=west] at (7.82,8.47) {\microfont PATRON};
+\fieldlabel{4.39}{8.26}{NAME}\draw[line width=.3pt] (5.16,8.22)--(8.08,8.22);
+\fieldlabel{4.39}{8.08}{ROLE / TITLE}\draw[line width=.3pt] (5.16,8.04)--(8.08,8.04);
+\fieldlabel{4.39}{7.90}{WHERE}\draw[line width=.3pt] (5.16,7.86)--(8.08,7.86);
+\fieldlabel{4.39}{7.72}{WANTS}\draw[line width=.3pt] (5.16,7.68)--(8.08,7.68);
+\fieldlabel{4.39}{7.54}{ABILITIES}\draw[line width=.3pt] (5.16,7.50)--(8.08,7.50);
+\draw[line width=.25pt] (4.39,7.37)--(8.08,7.37);
+\fieldlabel{4.39}{7.20}{FAVOR}\checkbox{4.86}{7.14}\checkbox{5.08}{7.14}\checkbox{5.30}{7.14}
+\fieldlabel{5.60}{7.20}{DEBT}\checkbox{5.97}{7.14}\fieldlabel{6.24}{7.20}{STRAINED}\checkbox{7.02}{7.14};
+
+% Connection 3 -- bottom left
+\node[anchor=west] at (.45,6.92) {\smallcapsfont CONNECTION 3};
+\checkbox{3.02}{6.88}\node[anchor=west] at (3.14,6.92) {\microfont CONTACT};
+\checkbox{3.67}{6.88}\node[anchor=west] at (3.79,6.92) {\microfont PATRON};
+\fieldlabel{.45}{6.71}{NAME}\draw[line width=.3pt] (1.22,6.67)--(4.20,6.67);
+\fieldlabel{.45}{6.53}{ROLE / TITLE}\draw[line width=.3pt] (1.22,6.49)--(4.20,6.49);
+\fieldlabel{.45}{6.35}{WHERE}\draw[line width=.3pt] (1.22,6.31)--(4.20,6.31);
+\fieldlabel{.45}{6.17}{WANTS}\draw[line width=.3pt] (1.22,6.13)--(4.20,6.13);
+\fieldlabel{.45}{5.99}{ABILITIES}\draw[line width=.3pt] (1.22,5.95)--(4.20,5.95);
+\draw[line width=.25pt] (.45,5.82)--(4.20,5.82);
+\fieldlabel{.45}{5.65}{FAVOR}\checkbox{.92}{5.59}\checkbox{1.14}{5.59}\checkbox{1.36}{5.59}
+\fieldlabel{1.66}{5.65}{DEBT}\checkbox{2.03}{5.59}\fieldlabel{2.30}{5.65}{STRAINED}\checkbox{3.08}{5.59};
+
+% Connection 4 -- bottom right
+\node[anchor=west] at (4.39,6.92) {\smallcapsfont CONNECTION 4};
+\checkbox{7.05}{6.88}\node[anchor=west] at (7.17,6.92) {\microfont CONTACT};
+\checkbox{7.70}{6.88}\node[anchor=west] at (7.82,6.92) {\microfont PATRON};
+\fieldlabel{4.39}{6.71}{NAME}\draw[line width=.3pt] (5.16,6.67)--(8.08,6.67);
+\fieldlabel{4.39}{6.53}{ROLE / TITLE}\draw[line width=.3pt] (5.16,6.49)--(8.08,6.49);
+\fieldlabel{4.39}{6.35}{WHERE}\draw[line width=.3pt] (5.16,6.31)--(8.08,6.31);
+\fieldlabel{4.39}{6.17}{WANTS}\draw[line width=.3pt] (5.16,6.13)--(8.08,6.13);
+\fieldlabel{4.39}{5.99}{ABILITIES}\draw[line width=.3pt] (5.16,5.95)--(8.08,5.95);
+\draw[line width=.25pt] (4.39,5.82)--(8.08,5.82);
+\fieldlabel{4.39}{5.65}{FAVOR}\checkbox{4.86}{5.59}\checkbox{5.08}{5.59}\checkbox{5.30}{5.59}
+\fieldlabel{5.60}{5.65}{DEBT}\checkbox{5.97}{5.59}\fieldlabel{6.24}{5.65}{STRAINED}\checkbox{7.02}{5.59};
+
+% Character notes above spells - balanced 50/50
+\node[anchor=west] at (.45,5.30) {\fontsize{9.5}{10}\selectfont BACKSTORY, MOTIVATION \& GOALS};
+\draw[line width=.55pt] (.42,5.18)--(4.18,5.18);
+\node[anchor=west] at (4.38,5.30) {\fontsize{9.5}{10}\selectfont OTHER CHARACTER DETAILS};
+\draw[line width=.55pt] (4.32,5.18)--(8.08,5.18);
+\draw[line width=.35pt] (4.25,5.15)--(4.25,3.72);
+\foreach \y in {4.96,4.74,4.52,4.30,4.08,3.86}{\draw[line width=.25pt] (.42,\y)--(4.18,\y);}
+\foreach \y in {4.96,4.74,4.52,4.30,4.08,3.86}{\draw[line width=.25pt] (4.32,\y)--(8.08,\y);}
+\draw[line width=.4pt] (.42,3.72)--(4.18,3.72);
+\draw[line width=.4pt] (4.32,3.72)--(8.08,3.72);
+
+% Spells/prayers at bottom; narrower spell and divine columns, wider notes
+\node[anchor=west] at (.45,3.38) {\fontsize{10.1}{10.5}\selectfont SPELLS / PRAYERS};
+\node[anchor=east] at (8.08,3.38) {\tinyfont PRAYERS / DAY: \rule{.28in}{.3pt}\quad CURRENT: \rule{.28in}{.3pt}};
+\draw[line width=.55pt] (.42,3.26)--(8.08,3.26);
+\node[anchor=west] at (.48,3.08) {\tinyfont SPELL};
+\node[anchor=west] at (2.61,3.08) {\tinyfont TIER / NOTES};
+\node[anchor=center] at (7.98,3.08) {\tinyfont DIV.};
+\draw[line width=.35pt] (2.55,3.23)--(2.55,.60);
+\draw[line width=.35pt] (7.74,3.23)--(7.74,.60);
+\foreach \y in {2.91,2.70,2.49,2.28,2.07,1.86,1.65,1.44,1.23,1.02,.81,.60}{\draw[line width=.25pt] (.42,\y)--(8.08,\y);}
+\foreach \y in {2.81,2.60,2.39,2.18,1.97,1.76,1.55,1.34,1.13,.92,.71,.50}{\checkbox{7.93}{\y}}
+
+\footer{2}
+\end{tikzpicture}
+\end{document}
